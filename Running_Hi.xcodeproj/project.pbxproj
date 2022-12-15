@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5318E085294B30670053EDDE /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5318E084294B30670053EDDE /* AuthenticationViewController.swift */; };
 		C14FAC7C2941F4510057C3DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14FAC7B2941F4510057C3DB /* AppDelegate.swift */; };
 		C14FAC7E2941F4510057C3DB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14FAC7D2941F4510057C3DB /* SceneDelegate.swift */; };
 		C14FAC852941F4520057C3DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C14FAC842941F4520057C3DB /* Assets.xcassets */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5318E084294B30670053EDDE /* AuthenticationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewController.swift; sourceTree = "<group>"; };
 		C14FAC782941F4510057C3DB /* Running_Hi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Running_Hi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C14FAC7B2941F4510057C3DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C14FAC7D2941F4510057C3DB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +45,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5318E083294B30550053EDDE /* AuthenticationScene */ = {
+			isa = PBXGroup;
+			children = (
+				5318E084294B30670053EDDE /* AuthenticationViewController.swift */,
+			);
+			path = AuthenticationScene;
+			sourceTree = "<group>";
+		};
+		5318E086294B306E0053EDDE /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				C14FAC7B2941F4510057C3DB /* AppDelegate.swift */,
+				C14FAC7D2941F4510057C3DB /* SceneDelegate.swift */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
 		C14FAC6F2941F4510057C3DB = {
 			isa = PBXGroup;
 			children = (
@@ -62,13 +81,13 @@
 		C14FAC7A2941F4510057C3DB /* Running_Hi */ = {
 			isa = PBXGroup;
 			children = (
+				5318E086294B306E0053EDDE /* Resource */,
+				5318E083294B30550053EDDE /* AuthenticationScene */,
 				C14FAC932941F5DA0057C3DB /* Service */,
 				C14FAC922941F5D00057C3DB /* Model */,
 				C14FAC912941F5C40057C3DB /* ViewModel */,
 				C14FAC902941F5BE0057C3DB /* View */,
 				C14FAC8F2941F5B50057C3DB /* Controller */,
-				C14FAC7B2941F4510057C3DB /* AppDelegate.swift */,
-				C14FAC7D2941F4510057C3DB /* SceneDelegate.swift */,
 				C14FAC842941F4520057C3DB /* Assets.xcassets */,
 				C14FAC862941F4520057C3DB /* LaunchScreen.storyboard */,
 				C14FAC892941F4520057C3DB /* Info.plist */,
@@ -198,6 +217,7 @@
 				C14FAC992941F7400057C3DB /* SearchController.swift in Sources */,
 				C14FAC7C2941F4510057C3DB /* AppDelegate.swift in Sources */,
 				C14FAC9D2941F8E10057C3DB /* PhotoController.swift in Sources */,
+				5318E085294B30670053EDDE /* AuthenticationViewController.swift in Sources */,
 				C14FAC7E2941F4510057C3DB /* SceneDelegate.swift in Sources */,
 				C14FAC972941F7390057C3DB /* FeedController.swift in Sources */,
 				C14FAC9B2941F7550057C3DB /* ProfileController.swift in Sources */,
@@ -339,7 +359,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = ZD5K45Y4NW;
+				DEVELOPMENT_TEAM = 5UYBRX8UM9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Running_Hi/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -370,7 +390,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = ZD5K45Y4NW;
+				DEVELOPMENT_TEAM = 5UYBRX8UM9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Running_Hi/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
