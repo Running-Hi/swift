@@ -28,6 +28,7 @@ class AuthenticationViewController: UIViewController {
     
     private lazy var loginStackView: UIStackView = {
         let stackView = UIStackView()
+        stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .vertical
         stackView.alignment = .fill
         stackView.distribution = .equalSpacing
