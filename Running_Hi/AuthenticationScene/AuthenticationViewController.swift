@@ -7,7 +7,7 @@
 
 import UIKit
 import AuthenticationServices
-
+import SnapKit
 
 class AuthenticationViewController: UIViewController {
         
@@ -23,6 +23,30 @@ class AuthenticationViewController: UIViewController {
     private lazy var appleLoginButton: ASAuthorizationAppleIDButton = {
         let button = ASAuthorizationAppleIDButton()
         button.cornerRadius = 22
+        return button
+    }()
+    
+    private lazy var kakaoLoginButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("카카오 로그인", for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 20)
+        button.titleLabel?.textAlignment = .center
+        return button
+    }()
+    
+    private lazy var instaLoginButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("인스타 로그인", for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 20)
+        button.titleLabel?.textAlignment = .center
+        return button
+    }()
+    
+    private lazy var naverLoginButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("네이버 로그인", for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 20)
+        button.titleLabel?.textAlignment = .center
         return button
     }()
     
@@ -45,9 +69,12 @@ class AuthenticationViewController: UIViewController {
     private func configureUI(){
         self.view.backgroundColor = .cyan
         self.view.addSubview(self.loginStackView)
-        [appleLoginButton].map{
+        
+        [appleLoginButton, instaLoginButton, kakaoLoginButton, naverLoginButton].map{
             loginStackView.addArrangedSubview($0)
         }
+        
+        
     }
 
   
