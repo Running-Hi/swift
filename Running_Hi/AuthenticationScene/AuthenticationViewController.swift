@@ -109,7 +109,6 @@ class AuthenticationViewController: UIViewController {
 //            .store(in: &subScription)
         self.kakaoLoginButton.tapPublisher
             .sink { _ in
-                //viewModel
                 let url = self.viewModel.kakaoLoginButtonDidTap()
                 let safariViewController = SFSafariViewController(url: url)
                 self.present(safariViewController, animated: false)

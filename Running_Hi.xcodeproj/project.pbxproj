@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		250AB395CE8BFA3A8FF3BA5D /* Pods_Running_Hi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97A47DF3E7456218702A92A3 /* Pods_Running_Hi.framework */; };
 		5318E085294B30670053EDDE /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5318E084294B30670053EDDE /* AuthenticationViewController.swift */; };
+		534C2190295083D5000A3A0E /* SignUpNameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534C218F295083D5000A3A0E /* SignUpNameViewModel.swift */; };
+		534C2192295087CA000A3A0E /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534C2191295087CA000A3A0E /* Coordinator.swift */; };
+		534C21942950884F000A3A0E /* AutheticationViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534C21932950884F000A3A0E /* AutheticationViewCoordinator.swift */; };
+		534C219629508F24000A3A0E /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534C219529508F24000A3A0E /* AppCoordinator.swift */; };
 		53E8F988294DB69300E7CCAD /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E8F987294DB69300E7CCAD /* AuthenticationViewModel.swift */; };
 		53E8F98D294DDF4F00E7CCAD /* KakaoNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E8F98C294DDF4F00E7CCAD /* KakaoNetworkService.swift */; };
 		53F6A34E294EE299000B5E33 /* ServerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F6A34D294EE299000B5E33 /* ServerService.swift */; };
@@ -28,6 +32,10 @@
 /* Begin PBXFileReference section */
 		2CC8834339157F168724CD63 /* Pods-Running_Hi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Running_Hi.release.xcconfig"; path = "Target Support Files/Pods-Running_Hi/Pods-Running_Hi.release.xcconfig"; sourceTree = "<group>"; };
 		5318E084294B30670053EDDE /* AuthenticationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewController.swift; sourceTree = "<group>"; };
+		534C218F295083D5000A3A0E /* SignUpNameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpNameViewModel.swift; sourceTree = "<group>"; };
+		534C2191295087CA000A3A0E /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		534C21932950884F000A3A0E /* AutheticationViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutheticationViewCoordinator.swift; sourceTree = "<group>"; };
+		534C219529508F24000A3A0E /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		53E8F987294DB69300E7CCAD /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
 		53E8F98C294DDF4F00E7CCAD /* KakaoNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoNetworkService.swift; sourceTree = "<group>"; };
 		53F6A34D294EE299000B5E33 /* ServerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerService.swift; sourceTree = "<group>"; };
@@ -73,6 +81,7 @@
 			children = (
 				5318E084294B30670053EDDE /* AuthenticationViewController.swift */,
 				53E8F987294DB69300E7CCAD /* AuthenticationViewModel.swift */,
+				534C21932950884F000A3A0E /* AutheticationViewCoordinator.swift */,
 			);
 			path = AuthenticationScene;
 			sourceTree = "<group>";
@@ -122,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				53F6A351294EF63A000B5E33 /* SignUpNameViewController.swift */,
+				534C218F295083D5000A3A0E /* SignUpNameViewModel.swift */,
 			);
 			path = SignUpScene;
 			sourceTree = "<group>";
@@ -137,6 +147,8 @@
 		53F6A354294EFF6E000B5E33 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				534C2191295087CA000A3A0E /* Coordinator.swift */,
+				534C219529508F24000A3A0E /* AppCoordinator.swift */,
 				53F6A355294EFF90000B5E33 /* RunninghiTextField.swift */,
 			);
 			path = View;
@@ -322,9 +334,13 @@
 			files = (
 				C14FAC952941F60C0057C3DB /* TabBarController.swift in Sources */,
 				C14FAC992941F7400057C3DB /* SearchController.swift in Sources */,
+				534C219629508F24000A3A0E /* AppCoordinator.swift in Sources */,
+				534C2192295087CA000A3A0E /* Coordinator.swift in Sources */,
 				C14FAC7C2941F4510057C3DB /* AppDelegate.swift in Sources */,
 				C14FAC9D2941F8E10057C3DB /* PhotoController.swift in Sources */,
 				53F6A356294EFF90000B5E33 /* RunninghiTextField.swift in Sources */,
+				534C21942950884F000A3A0E /* AutheticationViewCoordinator.swift in Sources */,
+				534C2190295083D5000A3A0E /* SignUpNameViewModel.swift in Sources */,
 				53E8F98D294DDF4F00E7CCAD /* KakaoNetworkService.swift in Sources */,
 				5318E085294B30670053EDDE /* AuthenticationViewController.swift in Sources */,
 				53F6A352294EF63A000B5E33 /* SignUpNameViewController.swift in Sources */,

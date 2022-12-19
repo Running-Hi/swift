@@ -8,10 +8,12 @@
 import UIKit
 
 import Combine
+import CombineCocoa
 import SnapKit
 
 class SignUpNameViewController: UIViewController {
-
+    private var subScription = Set<AnyCancellable>()
+    private var viewModel: SignUpNameViewModel!
     private lazy var titleLabel: UILabel = {
         var label = UILabel()
         label.text = "이름을 알려주세요 :)"
@@ -41,7 +43,7 @@ class SignUpNameViewController: UIViewController {
         return label
     }()
     
-    private lazy var nextButton: UIButton = {
+    private lazy var continueButton: UIButton = {
         var button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("계속", for: .normal)
@@ -56,6 +58,7 @@ class SignUpNameViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel = SignUpNameViewModel()
         self.configureUI()
         self.bindUI()
     }
@@ -83,8 +86,8 @@ class SignUpNameViewController: UIViewController {
             $0.trailing.equalToSuperview().offset(-50)
         }
         
-        self.view.addSubview(nextButton)
-        self.nextButton.snp.makeConstraints{
+        self.view.addSubview(continueButton)
+        self.continueButton.snp.makeConstraints{
             $0.leading.equalToSuperview().offset(20)
             $0.trailing.equalToSuperview().offset(-20)
             $0.bottom.equalTo(view.safeAreaLayoutGuide).offset(-40)
@@ -92,7 +95,18 @@ class SignUpNameViewController: UIViewController {
     }
     
     func bindUI(){
+        self.nameTextField.textPublisher
+            .sink { str in
+                
+            }
+            .store(in: &subScription)
         
+        self.continueButton.tapPublisher
+            .sink { _ in
+                self.viewModel.continueButtonDidTap()
+            }
+            .store(in: &subScription)
+
     }
 
 }

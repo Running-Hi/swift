@@ -30,6 +30,8 @@ typealias AuthenticationViewModelPrococol = AuthenticationViewModelInput & Authe
 
 final class AuthenticationViewModel: AuthenticationViewModelPrococol{
     
+    var signUpNamePageRequested = PassthroughSubject<Void, Never>()
+    
     private var subScription = Set<AnyCancellable>()
 
     func kakaoLoginButtonDidTap() -> URL{
