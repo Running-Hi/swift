@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		250AB395CE8BFA3A8FF3BA5D /* Pods_Running_Hi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97A47DF3E7456218702A92A3 /* Pods_Running_Hi.framework */; };
 		5318E085294B30670053EDDE /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5318E084294B30670053EDDE /* AuthenticationViewController.swift */; };
+		53E8F988294DB69300E7CCAD /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E8F987294DB69300E7CCAD /* AuthenticationViewModel.swift */; };
+		53E8F98D294DDF4F00E7CCAD /* KakaoNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E8F98C294DDF4F00E7CCAD /* KakaoNetworkService.swift */; };
+		53F6A34E294EE299000B5E33 /* ServerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F6A34D294EE299000B5E33 /* ServerService.swift */; };
+		53F6A352294EF63A000B5E33 /* SignUpNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F6A351294EF63A000B5E33 /* SignUpNameViewController.swift */; };
+		53F6A356294EFF90000B5E33 /* RunninghiTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F6A355294EFF90000B5E33 /* RunninghiTextField.swift */; };
 		C14FAC7C2941F4510057C3DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14FAC7B2941F4510057C3DB /* AppDelegate.swift */; };
 		C14FAC7E2941F4510057C3DB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14FAC7D2941F4510057C3DB /* SceneDelegate.swift */; };
 		C14FAC852941F4520057C3DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C14FAC842941F4520057C3DB /* Assets.xcassets */; };
@@ -23,6 +28,11 @@
 /* Begin PBXFileReference section */
 		2CC8834339157F168724CD63 /* Pods-Running_Hi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Running_Hi.release.xcconfig"; path = "Target Support Files/Pods-Running_Hi/Pods-Running_Hi.release.xcconfig"; sourceTree = "<group>"; };
 		5318E084294B30670053EDDE /* AuthenticationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewController.swift; sourceTree = "<group>"; };
+		53E8F987294DB69300E7CCAD /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
+		53E8F98C294DDF4F00E7CCAD /* KakaoNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoNetworkService.swift; sourceTree = "<group>"; };
+		53F6A34D294EE299000B5E33 /* ServerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerService.swift; sourceTree = "<group>"; };
+		53F6A351294EF63A000B5E33 /* SignUpNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpNameViewController.swift; sourceTree = "<group>"; };
+		53F6A355294EFF90000B5E33 /* RunninghiTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunninghiTextField.swift; sourceTree = "<group>"; };
 		97A47DF3E7456218702A92A3 /* Pods_Running_Hi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Running_Hi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C6E7EFC1C98438D72AEB3A7 /* Pods-Running_Hi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Running_Hi.debug.xcconfig"; path = "Target Support Files/Pods-Running_Hi/Pods-Running_Hi.debug.xcconfig"; sourceTree = "<group>"; };
 		C14FAC782941F4510057C3DB /* Running_Hi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Running_Hi.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -62,6 +72,7 @@
 			isa = PBXGroup;
 			children = (
 				5318E084294B30670053EDDE /* AuthenticationViewController.swift */,
+				53E8F987294DB69300E7CCAD /* AuthenticationViewModel.swift */,
 			);
 			path = AuthenticationScene;
 			sourceTree = "<group>";
@@ -73,6 +84,62 @@
 				C14FAC7D2941F4510057C3DB /* SceneDelegate.swift */,
 			);
 			path = Resource;
+			sourceTree = "<group>";
+		};
+		5353698E294DECA80067374C /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				5353698F294DECB10067374C /* Entities */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		5353698F294DECB10067374C /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		53E8F98A294DDF2600E7CCAD /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				53E8F98B294DDF2B00E7CCAD /* Networks */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		53E8F98B294DDF2B00E7CCAD /* Networks */ = {
+			isa = PBXGroup;
+			children = (
+				53E8F98C294DDF4F00E7CCAD /* KakaoNetworkService.swift */,
+				53F6A34D294EE299000B5E33 /* ServerService.swift */,
+			);
+			path = Networks;
+			sourceTree = "<group>";
+		};
+		53F6A350294EF60B000B5E33 /* SignUpScene */ = {
+			isa = PBXGroup;
+			children = (
+				53F6A351294EF63A000B5E33 /* SignUpNameViewController.swift */,
+			);
+			path = SignUpScene;
+			sourceTree = "<group>";
+		};
+		53F6A353294EFF67000B5E33 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				53F6A354294EFF6E000B5E33 /* View */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		53F6A354294EFF6E000B5E33 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				53F6A355294EFF90000B5E33 /* RunninghiTextField.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		B126A313C9ED0F13DFF447F1 /* Pods */ = {
@@ -105,12 +172,12 @@
 		C14FAC7A2941F4510057C3DB /* Running_Hi */ = {
 			isa = PBXGroup;
 			children = (
+				53F6A353294EFF67000B5E33 /* Common */,
 				5318E086294B306E0053EDDE /* Resource */,
+				5353698E294DECA80067374C /* Domain */,
+				53F6A350294EF60B000B5E33 /* SignUpScene */,
 				5318E083294B30550053EDDE /* AuthenticationScene */,
-				C14FAC932941F5DA0057C3DB /* Service */,
-				C14FAC922941F5D00057C3DB /* Model */,
-				C14FAC912941F5C40057C3DB /* ViewModel */,
-				C14FAC902941F5BE0057C3DB /* View */,
+				53E8F98A294DDF2600E7CCAD /* Service */,
 				C14FAC8F2941F5B50057C3DB /* Controller */,
 				C14FAC842941F4520057C3DB /* Assets.xcassets */,
 				C14FAC862941F4520057C3DB /* LaunchScreen.storyboard */,
@@ -130,34 +197,6 @@
 				C14FAC9A2941F7550057C3DB /* ProfileController.swift */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		C14FAC902941F5BE0057C3DB /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		C14FAC912941F5C40057C3DB /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		C14FAC922941F5D00057C3DB /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		C14FAC932941F5DA0057C3DB /* Service */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Service;
 			sourceTree = "<group>";
 		};
 		C14FAC9E2941FFE20057C3DB /* Authentication */ = {
@@ -285,8 +324,13 @@
 				C14FAC992941F7400057C3DB /* SearchController.swift in Sources */,
 				C14FAC7C2941F4510057C3DB /* AppDelegate.swift in Sources */,
 				C14FAC9D2941F8E10057C3DB /* PhotoController.swift in Sources */,
+				53F6A356294EFF90000B5E33 /* RunninghiTextField.swift in Sources */,
+				53E8F98D294DDF4F00E7CCAD /* KakaoNetworkService.swift in Sources */,
 				5318E085294B30670053EDDE /* AuthenticationViewController.swift in Sources */,
+				53F6A352294EF63A000B5E33 /* SignUpNameViewController.swift in Sources */,
+				53F6A34E294EE299000B5E33 /* ServerService.swift in Sources */,
 				C14FAC7E2941F4510057C3DB /* SceneDelegate.swift in Sources */,
+				53E8F988294DB69300E7CCAD /* AuthenticationViewModel.swift in Sources */,
 				C14FAC972941F7390057C3DB /* FeedController.swift in Sources */,
 				C14FAC9B2941F7550057C3DB /* ProfileController.swift in Sources */,
 			);
@@ -413,6 +457,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";

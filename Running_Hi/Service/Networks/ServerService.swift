@@ -7,6 +7,21 @@
 
 import UIKit
 
-class serverService: NSObject {
 
+
+enum serverAPI{
+    
+    
+    var url: String{
+        switch self{
+        
+        }
+    }
+    
+}
+
+class ServerService{
+    static let shared = ServerService()
+    private init() {}
+    
 }

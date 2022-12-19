@@ -6,9 +6,11 @@
 //
 
 import UIKit
+
+import Combine
 import SnapKit
 
-class SignUpViewController: UIViewController {
+class SignUpNameViewController: UIViewController {
 
     private lazy var titleLabel: UILabel = {
         var label = UILabel()
@@ -19,20 +21,43 @@ class SignUpViewController: UIViewController {
         return label
     }()
     
-    private lazy var textField: UITextField = {
+    private lazy var nameTextField: UITextField = {
         var textField = UITextField()
-        textField.borderStyle = .none
+        textField.translatesAutoresizingMaskIntoConstraints = false
+        textField.font = UIFont.boldSystemFont(ofSize: 20)
         textField.textContentType = .name
+        textField.borderStyle = .roundedRect
+        textField.placeholder = "이름 또는 닉네임을 입력해주세요."
+        
         return textField
     }()
     
+    private lazy var explainLabel: UILabel = {
+        var label = UILabel()
+        label.text = "Running-Hi에서 프로필에 표시되는 이름입니다."
+        label.textColor = .opaqueSeparator
+        label.textAlignment = .center
+        label.font = UIFont.systemFont(ofSize: 13)
+        return label
+    }()
     
+    private lazy var nextButton: UIButton = {
+        var button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitle("계속", for: .normal)
+        button.backgroundColor = .black
+        button.layer.cornerRadius = 15
+        button.titleLabel?.textColor = .white
+        button.titleLabel?.textAlignment = .center
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
+        return button
+    }()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configureUI()
-        
+        self.bindUI()
     }
     
     func configureUI(){
@@ -44,17 +69,31 @@ class SignUpViewController: UIViewController {
             $0.trailing.equalToSuperview().offset(-70)
         }
         
-        self.view.addSubview(textField)
-        self.textField.snp.makeConstraints{
-            $0.top.equalTo(titleLabel).offset(100)
-            $0.leading.equalToSuperview().offset(60)
-            $0.trailing.equalToSuperview().offset(60)
-            
+        self.view.addSubview(nameTextField)
+        self.nameTextField.snp.makeConstraints{
+            $0.centerY.equalToSuperview().offset(-40)
+            $0.leading.equalToSuperview().offset(50)
+            $0.trailing.equalToSuperview().offset(-50)
         }
         
+        self.view.addSubview(explainLabel)
+        self.explainLabel.snp.makeConstraints{
+            $0.top.equalTo(self.nameTextField.snp.bottom).offset(10)
+            $0.leading.equalToSuperview().offset(50)
+            $0.trailing.equalToSuperview().offset(-50)
+        }
+        
+        self.view.addSubview(nextButton)
+        self.nextButton.snp.makeConstraints{
+            $0.leading.equalToSuperview().offset(20)
+            $0.trailing.equalToSuperview().offset(-20)
+            $0.bottom.equalTo(view.safeAreaLayoutGuide).offset(-40)
+        }
+    }
+    
+    func bindUI(){
         
     }
-
 
 }
 

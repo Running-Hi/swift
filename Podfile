@@ -7,6 +7,8 @@ target 'Running_Hi' do
 	pod 'SnapKit', '~> 5.6.0'
 	pod 'KakaoSDKCommon'
 	pod 'KakaoSDKAuth'
+	pod 'KakaoSDKUser'
+	pod 'CombineCocoa'
   # Pods for Running_Hi
 
 end

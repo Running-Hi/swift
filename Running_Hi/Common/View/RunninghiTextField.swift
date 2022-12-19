@@ -7,6 +7,6 @@
 
 import UIKit
 
-class RunninghiTextField: NSObject {
+class RunninghiTextField: UIControl {
 
 }
