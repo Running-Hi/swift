@@ -9,11 +9,14 @@ import UIKit
 import AuthenticationServices
 import SafariServices
 
+
 import SnapKit
 import Combine
 import CombineCocoa
 
 class AuthenticationViewController: UIViewController {
+    let safariViewControllerNotification = Notification.Name(rawValue: "safariViewControllerNotification")
+    
     private var subScription = Set<AnyCancellable>()
     private var viewModel: AuthenticationViewModel!
     private lazy var titleLabel: UILabel = {
@@ -74,7 +77,7 @@ class AuthenticationViewController: UIViewController {
         super.viewDidLoad()
         //후에 coordinator로 받아야함
         viewModel = AuthenticationViewModel()
-        
+        NotificationCenter.default.addObserver(self, selector: #selector(safariLogin(notification:)), name: safariViewControllerNotification, object: nil)
         self.configureUI()
         self.bindUI()
     }
@@ -111,9 +114,9 @@ class AuthenticationViewController: UIViewController {
             .sink { _ in
                 let url = self.viewModel.kakaoLoginButtonDidTap()
                 let safariViewController = SFSafariViewController(url: url)
+                safariViewController.delegate = self
                 self.present(safariViewController, animated: false)
                 
-                print("클릭")
             }
             .store(in: &subScription)
         
@@ -128,11 +131,21 @@ class AuthenticationViewController: UIViewController {
             }
             .store(in: &subScription)
     }
+    
 
 
 }
 extension AuthenticationViewController: SFSafariViewControllerDelegate{
     func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
-        //sever로 회원정보 받아오기.
+        NotificationCenter.default.removeObserver(self, name: Notification.Name("safariViewControllerNotification"), object: nil)
+    }
+    @objc func safariLogin(notification: Notification){
+        NotificationCenter.default.removeObserver(self, name: Notification.Name("safariViewControllerNotification"), object: nil)
+        guard let url = notification.object as? URL else{
+            return
+        }
+        //url parse
+        print(url)
+        
     }
 }

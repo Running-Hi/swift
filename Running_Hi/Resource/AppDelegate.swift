@@ -11,14 +11,23 @@ import KakaoSDKCommon
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         KakaoSDK.initSDK(appKey: "b7ceeeeb7b5ea751e2c636bfa9a2d037")
         return true
     }
 
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        if let sourceApplication = options[.sourceApplication] {
+              if (String(describing: sourceApplication) == "com.apple.SafariViewService") {
+                   NotificationCenter.default.post(name: Notification.Name("safariViewControllerNotification"), object: url)
+                   return true
+               }
+           }
+
+           return false
+    }
+    
     // MARK: UISceneSession Lifecycle
 
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {

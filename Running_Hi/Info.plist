@@ -9,6 +9,7 @@
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
+				<string>http</string>
 				<string>kakaob7ceeeeb7b5ea751e2c636bfa9a2d037</string>
 			</array>
 		</dict>
