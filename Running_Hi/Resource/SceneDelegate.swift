@@ -27,7 +27,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                 let urr = AuthController.handleOpenUrl(url: url)
                 print(urr)
             }
-            
+            print(url)
         }
         
     }
