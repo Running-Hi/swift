@@ -17,16 +17,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
 
-    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
-        if let sourceApplication = options[.sourceApplication] {
-              if (String(describing: sourceApplication) == "com.apple.SafariViewService") {
-                   NotificationCenter.default.post(name: Notification.Name("safariViewControllerNotification"), object: url)
-                   return true
-               }
-           }
-
-           return false
-    }
+//    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+//        
+//    }
     
     // MARK: UISceneSession Lifecycle
 
