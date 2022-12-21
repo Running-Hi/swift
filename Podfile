@@ -9,6 +9,7 @@ target 'Running_Hi' do
 	pod 'KakaoSDKAuth'
 	pod 'KakaoSDKUser'
 	pod 'CombineCocoa'
+	pod 'JWTDecode', '~> 3.0'
   # Pods for Running_Hi
 
 end

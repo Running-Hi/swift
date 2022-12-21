@@ -16,13 +16,13 @@ import KakaoSDKUser
 import Alamofire
 
 protocol AuthenticationViewModelInput{
-//    func appleLoginButtonDidTap()
-    func kakaoLoginButtonDidTap() -> URL
-//    func naverLoginButtonDidTap()
-//    func instaLoginButtonDidTap()
+    //    func appleLoginButtonDidTap()
+    func kakaoLoginButtonDidTap()
+    //    func naverLoginButtonDidTap()
+    //    func instaLoginButtonDidTap()
 }
 protocol AuthenticationViewModelOutput{
-//    var errorPublisher: AnyPublisher<Error?, Never>{get}
+    //    var errorPublisher: AnyPublisher<Error?, Never>{get}
     
 }
 
@@ -33,31 +33,42 @@ final class AuthenticationViewModel: AuthenticationViewModelPrococol{
     var signUpNamePageRequested = PassthroughSubject<Void, Never>()
     
     private var subScription = Set<AnyCancellable>()
-
-    func kakaoLoginButtonDidTap() -> URL{
-        return self.getRequestLoginURL()
+    
+    func kakaoLoginButtonDidTap(){
+        self.kakaoLogin()
     }
     
     
-    private func getRequestLoginURL() -> URL{
-        return KakaoAPI.requestLogin.url
+    private func kakaoLogin(){
+        if (UserApi.isKakaoTalkLoginAvailable()) {
+            UserApi.shared.loginWithKakaoTalk {(oauthToken, error) in
+                if let error = error {
+                    print(error)
+                }
+                else {
+                    print("loginWithKakaoTalk() success.")
+                    guard let oauthToken = oauthToken else {return}
+                    self.requestFetchUser(oauthToken.accessToken)
+                }
+            }
+        }
     }
-    
-    
-//    func fetchAuthenticationCode(){
-//        KakaoNetworkService.shared.requestLogin()
+}
+//MARK: -- API Communication
+extension AuthenticationViewModel{
+    func requestFetchUser(_ accessToken: String){
+        ServerService.fetchJwt(accessToken)
 //            .sink { completion in
 //                switch completion{
-//                case .failure(let err):
-//                    print("AuthenticationViewModel - fetchAuthenticationCode : \(err)")
 //                case .finished:
-//                    print("AuthenticationViewModel - fetchAuthenticationCode : finished")
+//                    print("requestFetchUser - finished")
+//                case .failure(let err):
+//                    print("requestFetchUser - \(err)")
 //                }
-//            } receiveValue: { authentication in
-//                print(authentication.code)
+//            } receiveValue: {[weak self] response in
+//                guard let self = self else{return}
+//
 //            }
 //            .store(in: &subScription)
-//    }
-    
-    
+    }
 }

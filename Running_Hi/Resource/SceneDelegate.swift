@@ -21,14 +21,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
     }
+    
     func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
         if let url = URLContexts.first?.url {
             if (AuthApi.isKakaoTalkLoginUrl(url)) {
-                let urr = AuthController.handleOpenUrl(url: url)
-                print(urr)
+                _ = AuthController.handleOpenUrl(url: url)
             }
-            print(url)
         }
+        
         
     }
 

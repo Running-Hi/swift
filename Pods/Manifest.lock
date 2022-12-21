@@ -1,6 +1,7 @@
 PODS:
   - Alamofire (5.6.2)
   - CombineCocoa (0.4.0)
+  - JWTDecode (3.0.0)
   - KakaoSDKAuth (2.13.0):
     - KakaoSDKCommon (= 2.13.0)
   - KakaoSDKCommon (2.13.0):
@@ -16,6 +17,7 @@ PODS:
 
 DEPENDENCIES:
   - CombineCocoa
+  - JWTDecode (~> 3.0)
   - KakaoSDKAuth
   - KakaoSDKCommon
   - KakaoSDKUser
@@ -25,6 +27,7 @@ SPEC REPOS:
   trunk:
     - Alamofire
     - CombineCocoa
+    - JWTDecode
     - KakaoSDKAuth
     - KakaoSDKCommon
     - KakaoSDKUser
@@ -33,11 +36,12 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: d368e1ff8a298e6dde360e35a3e68e6c610e7204
   CombineCocoa: 68a050228ce7c53c1c5ac2c57cccf92a7f5c5085
+  JWTDecode: 82480a7173f8a811954e7e14a2b59f688ca4222a
   KakaoSDKAuth: 59b694eb81dda10a971beba64bb5842dcb985c81
   KakaoSDKCommon: 74c422d32200032e4e57f70e065e221296bced71
   KakaoSDKUser: 7c2d98fc54f744da4784b554a383ada548fed0e5
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
 
-PODFILE CHECKSUM: df2c6d246dc6bbb143a5d6180b668669b60246c8
+PODFILE CHECKSUM: e60305421071fabbd1310ad3317cc30f75b29dee
 
 COCOAPODS: 1.11.2

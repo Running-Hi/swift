@@ -13,6 +13,7 @@
 		534C2192295087CA000A3A0E /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534C2191295087CA000A3A0E /* Coordinator.swift */; };
 		534C21942950884F000A3A0E /* AutheticationViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534C21932950884F000A3A0E /* AutheticationViewCoordinator.swift */; };
 		534C219629508F24000A3A0E /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534C219529508F24000A3A0E /* AppCoordinator.swift */; };
+		534C219D295324CE000A3A0E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534C219C295324CE000A3A0E /* User.swift */; };
 		53E8F988294DB69300E7CCAD /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E8F987294DB69300E7CCAD /* AuthenticationViewModel.swift */; };
 		53E8F98D294DDF4F00E7CCAD /* KakaoNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E8F98C294DDF4F00E7CCAD /* KakaoNetworkService.swift */; };
 		53F6A34E294EE299000B5E33 /* ServerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F6A34D294EE299000B5E33 /* ServerService.swift */; };
@@ -36,6 +37,7 @@
 		534C2191295087CA000A3A0E /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		534C21932950884F000A3A0E /* AutheticationViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutheticationViewCoordinator.swift; sourceTree = "<group>"; };
 		534C219529508F24000A3A0E /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		534C219C295324CE000A3A0E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		53E8F987294DB69300E7CCAD /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
 		53E8F98C294DDF4F00E7CCAD /* KakaoNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoNetworkService.swift; sourceTree = "<group>"; };
 		53F6A34D294EE299000B5E33 /* ServerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerService.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 		5353698F294DECB10067374C /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				534C219C295324CE000A3A0E /* User.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -184,9 +187,9 @@
 		C14FAC7A2941F4510057C3DB /* Running_Hi */ = {
 			isa = PBXGroup;
 			children = (
+				5353698E294DECA80067374C /* Domain */,
 				53F6A353294EFF67000B5E33 /* Common */,
 				5318E086294B306E0053EDDE /* Resource */,
-				5353698E294DECA80067374C /* Domain */,
 				53F6A350294EF60B000B5E33 /* SignUpScene */,
 				5318E083294B30550053EDDE /* AuthenticationScene */,
 				53E8F98A294DDF2600E7CCAD /* Service */,
@@ -346,6 +349,7 @@
 				53F6A352294EF63A000B5E33 /* SignUpNameViewController.swift in Sources */,
 				53F6A34E294EE299000B5E33 /* ServerService.swift in Sources */,
 				C14FAC7E2941F4510057C3DB /* SceneDelegate.swift in Sources */,
+				534C219D295324CE000A3A0E /* User.swift in Sources */,
 				53E8F988294DB69300E7CCAD /* AuthenticationViewModel.swift in Sources */,
 				C14FAC972941F7390057C3DB /* FeedController.swift in Sources */,
 				C14FAC9B2941F7550057C3DB /* ProfileController.swift in Sources */,
