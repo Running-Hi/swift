@@ -13,7 +13,8 @@ import KakaoSDKAuth
 import KakaoSDKCommon
 import KakaoSDKUser
 
-import Alamofire
+import Moya
+import JWTDecode
 
 protocol AuthenticationViewModelInput{
     //    func appleLoginButtonDidTap()
@@ -48,7 +49,7 @@ final class AuthenticationViewModel: AuthenticationViewModelPrococol{
                 else {
                     print("loginWithKakaoTalk() success.")
                     guard let oauthToken = oauthToken else {return}
-                    self.requestFetchUser(oauthToken.accessToken)
+                    self.requestFetchJwt(oauthToken.accessToken, "kakao")
                 }
             }
         }
@@ -56,19 +57,33 @@ final class AuthenticationViewModel: AuthenticationViewModelPrococol{
 }
 //MARK: -- API Communication
 extension AuthenticationViewModel{
-    func requestFetchUser(_ accessToken: String){
-        ServerService.fetchJwt(accessToken)
-//            .sink { completion in
-//                switch completion{
-//                case .finished:
-//                    print("requestFetchUser - finished")
-//                case .failure(let err):
-//                    print("requestFetchUser - \(err)")
-//                }
-//            } receiveValue: {[weak self] response in
-//                guard let self = self else{return}
-//
-//            }
-//            .store(in: &subScription)
+    func requestFetchJwt(_ accessToken: String, _ authProvider: String){
+        ServerServiceManager.fetchJwt(accessToken, authProvider)
+            .sink { completion in
+                switch completion{
+                case .finished:
+                    print("AuthenticationViewModel-requestFetchJwt : Finished")
+                case .failure(let err):
+                    print("AuthenticationViewModel-requestFetchJwt : \(err)")
+                }
+            } receiveValue: { communication in
+                if communication.receiveSuccess{
+                    //jwt토큰 받는것 성공
+                    do{
+                        let jwt = try decode(jwt: communication.receiveResponse.jwt)
+                        print(jwt)
+                        
+                    }catch(let err){
+                        print("AuthenticationViewModel - decodingError \(err)")
+                    }
+                }else{
+                    //jwt토큰 받는것 실패
+                    //message와 status코드 확인
+                    //토큰 만료시 재요청
+                    
+                }
+                
+            }
+            .store(in: &subScription)
     }
 }
