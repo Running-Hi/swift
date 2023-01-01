@@ -11,7 +11,7 @@ import Moya
 import KakaoSDKAuth
 import JWTDecode
 
-final class ServerServiceManager{
+final class ServerServiceAPIManager{
     private var subScription = Set<AnyCancellable>()
     private static var provider: MoyaProvider<ServerServiceAPI>!
     private static let serverEndPointClosure = {(target: ServerServiceAPI) -> Endpoint in
@@ -24,7 +24,7 @@ final class ServerServiceManager{
     
     static func fetchJwt(_ accessToken: String, _ authProvider: String) -> AnyPublisher<Communication, Error>{
         provider = MoyaProvider<ServerServiceAPI>(endpointClosure: serverEndPointClosure)
-        return provider.requestPublisher(.fetchJwt(accessToken, authProvider))
+        return provider.requestPublisher(.jwt(accessToken, authProvider))
             .map(Communication.self)
             .mapError { moyaError in
                 return moyaError as Error

@@ -1,0 +1,6 @@
+framework module Pods_Running_Hi_Running_HiTests {
+  umbrella header "Pods-Running_Hi-Running_HiTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -58,7 +58,7 @@ final class AuthenticationViewModel: AuthenticationViewModelPrococol{
 //MARK: -- API Communication
 extension AuthenticationViewModel{
     func requestFetchJwt(_ accessToken: String, _ authProvider: String){
-        ServerServiceManager.fetchJwt(accessToken, authProvider)
+        ServerServiceAPIManager.fetchJwt(accessToken, authProvider)
             .sink { completion in
                 switch completion{
                 case .finished:
@@ -70,8 +70,8 @@ extension AuthenticationViewModel{
                 if communication.receiveSuccess{
                     //jwt토큰 받는것 성공
                     do{
-                        let jwt = try decode(jwt: communication.receiveResponse.jwt)
-                        print(jwt)
+//                        let jwt = try decode(jwt: communication.receiveResponse.jwt)
+//                        print(jwt)
                         
                     }catch(let err){
                         print("AuthenticationViewModel - decodingError \(err)")

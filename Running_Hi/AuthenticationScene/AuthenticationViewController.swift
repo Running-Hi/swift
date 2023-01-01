@@ -11,6 +11,7 @@ import AuthenticationServices
 import SnapKit
 import Combine
 import CombineCocoa
+import JWTDecode
 
 class AuthenticationViewController: UIViewController {
     
@@ -116,6 +117,23 @@ class AuthenticationViewController: UIViewController {
         self.naverLoginButton.tapPublisher
             .sink { _ in
                 //viewModel
+                print("클릭")
+                let expectedObject = ServerServiceAPI
+                    .jwt("accesstoken이다", "kakao이다")
+                    .sampleData
+                print(expectedObject)
+                let expectedObjectDecoding = try? JSONDecoder().decode(Communication.self, from: expectedObject)
+                print(expectedObjectDecoding?.response)
+                
+//                guard let expectedObjectDecodingJwt = expectedObjectDecoding?.receiveResponse.jwt else {return}
+//                let sampleJwt = try! decode(jwt: expectedObjectDecodingJwt)
+//                print(sampleJwt)
+                do{
+                    
+                }catch{
+                    
+                }
+                
             }
             .store(in: &subScription)
         self.instaLoginButton.tapPublisher
