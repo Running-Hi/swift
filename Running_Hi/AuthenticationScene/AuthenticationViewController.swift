@@ -15,8 +15,6 @@ import JWTDecode
 
 class AuthenticationViewController: UIViewController {
     
-    private var subScription = Set<AnyCancellable>()
-    private var viewModel: AuthenticationViewModel!
     private lazy var titleLabel: UILabel = {
         var label = UILabel()
         label.text = "러닝-하이"
@@ -71,10 +69,17 @@ class AuthenticationViewController: UIViewController {
         return stackView
     }()
     
+    
+    private var subScription = Set<AnyCancellable>()
+    private var viewModel: AuthenticationViewModelProtocol!
+    
+    convenience init(viewModel: AuthenticationViewModelProtocol){
+        self.init(nibName: nil, bundle: nil)
+        self.viewModel = viewModel
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        //후에 coordinator로 받아야함
-        viewModel = AuthenticationViewModel()
         self.configureUI()
         self.bindUI()
     }
@@ -116,24 +121,6 @@ class AuthenticationViewController: UIViewController {
         
         self.naverLoginButton.tapPublisher
             .sink { _ in
-                //viewModel
-                print("클릭")
-                let expectedObject = ServerServiceAPI
-                    .jwt("accesstoken이다", "kakao이다")
-                    .sampleData
-                print(expectedObject)
-                let expectedObjectDecoding = try? JSONDecoder().decode(Communication.self, from: expectedObject)
-                print(expectedObjectDecoding?.response)
-                
-//                guard let expectedObjectDecodingJwt = expectedObjectDecoding?.receiveResponse.jwt else {return}
-//                let sampleJwt = try! decode(jwt: expectedObjectDecodingJwt)
-//                print(sampleJwt)
-                do{
-                    
-                }catch{
-                    
-                }
-                
             }
             .store(in: &subScription)
         self.instaLoginButton.tapPublisher

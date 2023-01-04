@@ -17,11 +17,22 @@
 		534C219D295324CE000A3A0E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534C219C295324CE000A3A0E /* User.swift */; };
 		53E61C8B2955B232003A5E78 /* ServerServiceAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E61C8A2955B232003A5E78 /* ServerServiceAPI.swift */; };
 		53E61C8D2955B5A5003A5E78 /* OAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E61C8C2955B5A5003A5E78 /* OAuth.swift */; };
-		53E61C912956FC31003A5E78 /* Communication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E61C902956FC31003A5E78 /* Communication.swift */; };
+		53E61C912956FC31003A5E78 /* JwtData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E61C902956FC31003A5E78 /* JwtData.swift */; };
 		53E61CA22958747D003A5E78 /* ServerServiceAPIManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E61CA12958747D003A5E78 /* ServerServiceAPIManagerTests.swift */; };
 		53E8F988294DB69300E7CCAD /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E8F987294DB69300E7CCAD /* AuthenticationViewModel.swift */; };
 		53E8F98D294DDF4F00E7CCAD /* KakaoNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E8F98C294DDF4F00E7CCAD /* KakaoNetworkService.swift */; };
-		53F6A34E294EE299000B5E33 /* ServerServiceAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F6A34D294EE299000B5E33 /* ServerServiceAPIManager.swift */; };
+		53F6172629616B7B00C605E7 /* JwtDataServerDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F6172529616B7B00C605E7 /* JwtDataServerDTO.swift */; };
+		53F6172A2964484700C605E7 /* GetJwtUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F617292964484700C605E7 /* GetJwtUseCase.swift */; };
+		53F6172C2964487A00C605E7 /* GetJwtUseCaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F6172B2964487A00C605E7 /* GetJwtUseCaseProtocol.swift */; };
+		53F6173029644AF900C605E7 /* LoginRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F6172F29644AF900C605E7 /* LoginRepository.swift */; };
+		53F6173229644B8400C605E7 /* LoginRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F6173129644B8400C605E7 /* LoginRepositoryProtocol.swift */; };
+		53F617352964505700C605E7 /* ServerNetworkServcieProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F617342964505700C605E7 /* ServerNetworkServcieProtocol.swift */; };
+		53F61737296580ED00C605E7 /* KakaoAuthProvideUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F61736296580ED00C605E7 /* KakaoAuthProvideUseCase.swift */; };
+		53F6173929658B0F00C605E7 /* KaKaoNetworkServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F6173829658B0F00C605E7 /* KaKaoNetworkServiceProtocol.swift */; };
+		53F6173B29658B5400C605E7 /* KakaoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F6173A29658B5400C605E7 /* KakaoRepository.swift */; };
+		53F6173D29658BA800C605E7 /* KakaoRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F6173C29658BA800C605E7 /* KakaoRepositoryProtocol.swift */; };
+		53F6173F2965964300C605E7 /* KakaoAuthProvideUseCaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F6173E2965964300C605E7 /* KakaoAuthProvideUseCaseProtocol.swift */; };
+		53F6A34E294EE299000B5E33 /* ServerNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F6A34D294EE299000B5E33 /* ServerNetworkService.swift */; };
 		53F6A352294EF63A000B5E33 /* SignUpNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F6A351294EF63A000B5E33 /* SignUpNameViewController.swift */; };
 		53F6A356294EFF90000B5E33 /* RunninghiTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F6A355294EFF90000B5E33 /* RunninghiTextField.swift */; };
 		C14FAC7C2941F4510057C3DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14FAC7B2941F4510057C3DB /* AppDelegate.swift */; };
@@ -51,12 +62,24 @@
 		534C219C295324CE000A3A0E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		53E61C8A2955B232003A5E78 /* ServerServiceAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerServiceAPI.swift; sourceTree = "<group>"; };
 		53E61C8C2955B5A5003A5E78 /* OAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuth.swift; sourceTree = "<group>"; };
-		53E61C902956FC31003A5E78 /* Communication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Communication.swift; sourceTree = "<group>"; };
+		53E61C902956FC31003A5E78 /* JwtData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JwtData.swift; sourceTree = "<group>"; };
 		53E61C9629587268003A5E78 /* Running_HiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Running_HiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		53E61CA12958747D003A5E78 /* ServerServiceAPIManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerServiceAPIManagerTests.swift; sourceTree = "<group>"; };
 		53E8F987294DB69300E7CCAD /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
 		53E8F98C294DDF4F00E7CCAD /* KakaoNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoNetworkService.swift; sourceTree = "<group>"; };
-		53F6A34D294EE299000B5E33 /* ServerServiceAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerServiceAPIManager.swift; sourceTree = "<group>"; };
+		53F6172529616B7B00C605E7 /* JwtDataServerDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JwtDataServerDTO.swift; sourceTree = "<group>"; };
+		53F617292964484700C605E7 /* GetJwtUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetJwtUseCase.swift; sourceTree = "<group>"; };
+		53F6172B2964487A00C605E7 /* GetJwtUseCaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetJwtUseCaseProtocol.swift; sourceTree = "<group>"; };
+		53F6172F29644AF900C605E7 /* LoginRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRepository.swift; sourceTree = "<group>"; };
+		53F6173129644B8400C605E7 /* LoginRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRepositoryProtocol.swift; sourceTree = "<group>"; };
+		53F617342964505700C605E7 /* ServerNetworkServcieProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerNetworkServcieProtocol.swift; sourceTree = "<group>"; };
+		53F61736296580ED00C605E7 /* KakaoAuthProvideUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoAuthProvideUseCase.swift; sourceTree = "<group>"; };
+		53F6173829658B0F00C605E7 /* KaKaoNetworkServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaKaoNetworkServiceProtocol.swift; sourceTree = "<group>"; };
+		53F6173A29658B5400C605E7 /* KakaoRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoRepository.swift; sourceTree = "<group>"; };
+		53F6173C29658BA800C605E7 /* KakaoRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoRepositoryProtocol.swift; sourceTree = "<group>"; };
+		53F6173E2965964300C605E7 /* KakaoAuthProvideUseCaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoAuthProvideUseCaseProtocol.swift; sourceTree = "<group>"; };
+		53F617682965A1BC00C605E7 /* Running_Hi copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Running_Hi copy-Info.plist"; path = "/Users/anjongpyo/Desktop/RunningHi/swift/Running_Hi copy-Info.plist"; sourceTree = "<absolute>"; };
+		53F6A34D294EE299000B5E33 /* ServerNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerNetworkService.swift; sourceTree = "<group>"; };
 		53F6A351294EF63A000B5E33 /* SignUpNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpNameViewController.swift; sourceTree = "<group>"; };
 		53F6A355294EFF90000B5E33 /* RunninghiTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunninghiTextField.swift; sourceTree = "<group>"; };
 		6565CA4036C5BD2165220641 /* Pods-Running_Hi-Running_HiTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Running_Hi-Running_HiTests.release.xcconfig"; path = "Target Support Files/Pods-Running_Hi-Running_HiTests/Pods-Running_Hi-Running_HiTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -122,9 +145,9 @@
 		5353698E294DECA80067374C /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				53F61720296160F800C605E7 /* UseCases */,
-				53F6171F296160EF00C605E7 /* Interfaces */,
 				5353698F294DECB10067374C /* Entities */,
+				53F6171F296160EF00C605E7 /* Interfaces */,
+				53F61720296160F800C605E7 /* UseCases */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -134,7 +157,7 @@
 			children = (
 				534C219C295324CE000A3A0E /* User.swift */,
 				53E61C8C2955B5A5003A5E78 /* OAuth.swift */,
-				53E61C902956FC31003A5E78 /* Communication.swift */,
+				53E61C902956FC31003A5E78 /* JwtData.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -159,7 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				53E8F98C294DDF4F00E7CCAD /* KakaoNetworkService.swift */,
-				53F6A34D294EE299000B5E33 /* ServerServiceAPIManager.swift */,
+				53F6A34D294EE299000B5E33 /* ServerNetworkService.swift */,
 				53E61C8A2955B232003A5E78 /* ServerServiceAPI.swift */,
 			);
 			path = Networks;
@@ -168,6 +191,8 @@
 		53F6171F296160EF00C605E7 /* Interfaces */ = {
 			isa = PBXGroup;
 			children = (
+				53F6172E2964498900C605E7 /* UseCases */,
+				53F6172D2964498100C605E7 /* Repositories */,
 			);
 			path = Interfaces;
 			sourceTree = "<group>";
@@ -175,6 +200,8 @@
 		53F61720296160F800C605E7 /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
+				53F617292964484700C605E7 /* GetJwtUseCase.swift */,
+				53F61736296580ED00C605E7 /* KakaoAuthProvideUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -192,6 +219,8 @@
 		53F617222961616000C605E7 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				53F6172F29644AF900C605E7 /* LoginRepository.swift */,
+				53F6173A29658B5400C605E7 /* KakaoRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -199,6 +228,8 @@
 		53F617232961616A00C605E7 /* Interfaces */ = {
 			isa = PBXGroup;
 			children = (
+				53F617342964505700C605E7 /* ServerNetworkServcieProtocol.swift */,
+				53F6173829658B0F00C605E7 /* KaKaoNetworkServiceProtocol.swift */,
 			);
 			path = Interfaces;
 			sourceTree = "<group>";
@@ -206,8 +237,27 @@
 		53F617242961616F00C605E7 /* DataTransferObjects */ = {
 			isa = PBXGroup;
 			children = (
+				53F6172529616B7B00C605E7 /* JwtDataServerDTO.swift */,
 			);
 			path = DataTransferObjects;
+			sourceTree = "<group>";
+		};
+		53F6172D2964498100C605E7 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				53F6173129644B8400C605E7 /* LoginRepositoryProtocol.swift */,
+				53F6173C29658BA800C605E7 /* KakaoRepositoryProtocol.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		53F6172E2964498900C605E7 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				53F6172B2964487A00C605E7 /* GetJwtUseCaseProtocol.swift */,
+				53F6173E2965964300C605E7 /* KakaoAuthProvideUseCaseProtocol.swift */,
+			);
+			path = UseCases;
 			sourceTree = "<group>";
 		};
 		53F6A350294EF60B000B5E33 /* SignUpScene */ = {
@@ -256,6 +306,7 @@
 				C14FAC792941F4510057C3DB /* Products */,
 				B126A313C9ED0F13DFF447F1 /* Pods */,
 				3560BA8E8AB7304254C43E9F /* Frameworks */,
+				53F617682965A1BC00C605E7 /* Running_Hi copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -271,11 +322,11 @@
 		C14FAC7A2941F4510057C3DB /* Running_Hi */ = {
 			isa = PBXGroup;
 			children = (
-				53F617212961614400C605E7 /* Data */,
 				5353698E294DECA80067374C /* Domain */,
+				53F617212961614400C605E7 /* Data */,
+				53E8F98A294DDF2600E7CCAD /* Service */,
 				5318E083294B30550053EDDE /* AuthenticationScene */,
 				53F6A350294EF60B000B5E33 /* SignUpScene */,
-				53E8F98A294DDF2600E7CCAD /* Service */,
 				53F6A353294EFF67000B5E33 /* Common */,
 				5318E086294B306E0053EDDE /* Resource */,
 				C14FAC842941F4520057C3DB /* Assets.xcassets */,
@@ -478,22 +529,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				53E61C912956FC31003A5E78 /* Communication.swift in Sources */,
+				53F6173929658B0F00C605E7 /* KaKaoNetworkServiceProtocol.swift in Sources */,
+				53E61C912956FC31003A5E78 /* JwtData.swift in Sources */,
 				534C219629508F24000A3A0E /* AppCoordinator.swift in Sources */,
 				534C2192295087CA000A3A0E /* Coordinator.swift in Sources */,
+				53F6173229644B8400C605E7 /* LoginRepositoryProtocol.swift in Sources */,
+				53F61737296580ED00C605E7 /* KakaoAuthProvideUseCase.swift in Sources */,
 				C14FAC7C2941F4510057C3DB /* AppDelegate.swift in Sources */,
 				53F6A356294EFF90000B5E33 /* RunninghiTextField.swift in Sources */,
+				53F6173029644AF900C605E7 /* LoginRepository.swift in Sources */,
 				534C21942950884F000A3A0E /* AutheticationViewCoordinator.swift in Sources */,
+				53F6172A2964484700C605E7 /* GetJwtUseCase.swift in Sources */,
+				53F617352964505700C605E7 /* ServerNetworkServcieProtocol.swift in Sources */,
 				534C2190295083D5000A3A0E /* SignUpNameViewModel.swift in Sources */,
 				53E8F98D294DDF4F00E7CCAD /* KakaoNetworkService.swift in Sources */,
+				53F6173F2965964300C605E7 /* KakaoAuthProvideUseCaseProtocol.swift in Sources */,
+				53F6173B29658B5400C605E7 /* KakaoRepository.swift in Sources */,
 				5318E085294B30670053EDDE /* AuthenticationViewController.swift in Sources */,
 				53F6A352294EF63A000B5E33 /* SignUpNameViewController.swift in Sources */,
-				53F6A34E294EE299000B5E33 /* ServerServiceAPIManager.swift in Sources */,
+				53F6A34E294EE299000B5E33 /* ServerNetworkService.swift in Sources */,
+				53F6172629616B7B00C605E7 /* JwtDataServerDTO.swift in Sources */,
 				C14FAC7E2941F4510057C3DB /* SceneDelegate.swift in Sources */,
 				53E61C8B2955B232003A5E78 /* ServerServiceAPI.swift in Sources */,
 				534C219D295324CE000A3A0E /* User.swift in Sources */,
 				53E8F988294DB69300E7CCAD /* AuthenticationViewModel.swift in Sources */,
+				53F6172C2964487A00C605E7 /* GetJwtUseCaseProtocol.swift in Sources */,
 				53E61C8D2955B5A5003A5E78 /* OAuth.swift in Sources */,
+				53F6173D29658BA800C605E7 /* KakaoRepositoryProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -6,7 +6,7 @@
 //
 
 import Combine
-import Alamofire
+
 import KakaoSDKCommon
 import KakaoSDKAuth
 import KakaoSDKUser
@@ -23,9 +23,24 @@ enum KakaoAPI{
 }
 
 
-class KakaoNetworkService{
+class KakaoNetworkService: KakaoNetworkServiceProtocol{
     static let shared = KakaoNetworkService()
 
     private init(){}
-
+    
+    func requestKakaoLogin() -> AnyPublisher<String, Error>{
+        return Future<String, Error> { promise in
+            if (UserApi.isKakaoTalkLoginAvailable()) {
+                UserApi.shared.loginWithKakaoTalk {(oauthToken, error) in
+                    if let error = error {
+                        print(error)
+                    }
+                    else {
+                        guard let oauthToken = oauthToken else {return}
+                        return promise(.success(oauthToken.accessToken))
+                    }
+                }
+            }
+        }.eraseToAnyPublisher()
+    }
 }

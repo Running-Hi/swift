@@ -7,27 +7,30 @@
 import Moya
 
 enum ServerServiceAPI{
-    case jwt(_ accessToken: String, _ authProvider: String)
+    case kakaoJwt(_ accessToken: String)
 }
 
 extension ServerServiceAPI: TargetType {
-    var baseURL: URL { URL(string: "https://oauth-test-web.onrender.com/jwt/%7Bjwt")! }
+    var baseURL: URL { URL(string: "http://localhost:8080")! }
     var path: String {
         switch self {
-        case .jwt:
-            return "/oauth/signin"
+        case .kakaoJwt(_):
+            return "/oauth/signin/kakao"
         }
     }
     var method: Moya.Method {
         switch self {
-        case .jwt:
-            return .post//
+        case .kakaoJwt:
+            return .post
         }
     }
     var task: Task {
         switch self {
-        case .jwt:
-            return .requestPlain
+        case .kakaoJwt(let accessToken):
+            var params: [String: Any] = [:]
+            params["access_token"] = accessToken
+            let paramsJson = try? JSONSerialization.data(withJSONObject: params)
+            return .requestData(paramsJson ?? Data())
         }
     }
     var headers: [String: String]? {
@@ -36,9 +39,8 @@ extension ServerServiceAPI: TargetType {
     
     var sampleData: Data {
             switch self {
-            case .jwt(let accessToken, let authProvider):
+            case .kakaoJwt(let accessToken):
                 let _ = accessToken
-                let _ = authProvider
                 
                 return Data(
                     """

@@ -27,63 +27,45 @@ protocol AuthenticationViewModelOutput{
     
 }
 
-typealias AuthenticationViewModelPrococol = AuthenticationViewModelInput & AuthenticationViewModelOutput
+typealias AuthenticationViewModelProtocol = AuthenticationViewModelInput & AuthenticationViewModelOutput
 
-final class AuthenticationViewModel: AuthenticationViewModelPrococol{
+final class AuthenticationViewModel: AuthenticationViewModelProtocol{
     
     var signUpNamePageRequested = PassthroughSubject<Void, Never>()
     
-    private var subScription = Set<AnyCancellable>()
+    private let getJwtUseCase: GetJwtUseCaseProtocol
+    private let kakaoAuthProvideUsecase: KakaoAuthProvideUseCaseProtocol
+    
+    init(getJwtUseCase: GetJwtUseCaseProtocol, kakaoAuthProvideUsecase: KakaoAuthProvideUseCaseProtocol) {
+        self.getJwtUseCase = getJwtUseCase
+        self.kakaoAuthProvideUsecase = kakaoAuthProvideUsecase
+    }
+    
+    private var subscription = Set<AnyCancellable>()
     
     func kakaoLoginButtonDidTap(){
-        self.kakaoLogin()
-    }
-    
-    
-    private func kakaoLogin(){
-        if (UserApi.isKakaoTalkLoginAvailable()) {
-            UserApi.shared.loginWithKakaoTalk {(oauthToken, error) in
-                if let error = error {
-                    print(error)
+        self.kakaoAuthProvideUsecase.getKakaoAccessToken()
+        
+        self.kakaoAuthProvideUsecase.gotKakaoAccessTokenPublisher
+            .sink {[weak self] completion in
+                switch completion{
+                case .finished:
+                    print("AuthenticationViewModel - kakaoLoginButtonDidTap : Success")
+                case .failure(let err):
+                    print("AuthenticationViewModel - kakaoLoginButtonDidTap : \(err)")
                 }
-                else {
-                    print("loginWithKakaoTalk() success.")
-                    guard let oauthToken = oauthToken else {return}
-                    self.requestFetchJwt(oauthToken.accessToken, "kakao")
-                }
+            } receiveValue: {[weak self] accessToken in
+                self?.passToken(accessToken)
             }
-        }
+            .store(in: &subscription)
     }
+    func passToken(_ accessToken: String?){
+        guard let accessToken = accessToken else {return}
+        self.getJwtUseCase.getJwt(for: accessToken)
+    }
+    
 }
 //MARK: -- API Communication
 extension AuthenticationViewModel{
-    func requestFetchJwt(_ accessToken: String, _ authProvider: String){
-        ServerServiceAPIManager.fetchJwt(accessToken, authProvider)
-            .sink { completion in
-                switch completion{
-                case .finished:
-                    print("AuthenticationViewModel-requestFetchJwt : Finished")
-                case .failure(let err):
-                    print("AuthenticationViewModel-requestFetchJwt : \(err)")
-                }
-            } receiveValue: { communication in
-                if communication.receiveSuccess{
-                    //jwt토큰 받는것 성공
-                    do{
-//                        let jwt = try decode(jwt: communication.receiveResponse.jwt)
-//                        print(jwt)
-                        
-                    }catch(let err){
-                        print("AuthenticationViewModel - decodingError \(err)")
-                    }
-                }else{
-                    //jwt토큰 받는것 실패
-                    //message와 status코드 확인
-                    //토큰 만료시 재요청
-                    
-                }
-                
-            }
-            .store(in: &subScription)
-    }
+
 }
