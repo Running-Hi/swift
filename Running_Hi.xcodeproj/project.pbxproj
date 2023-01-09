@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		07966AA9B52DD2C502F3BF29 /* Pods_Running_Hi_Running_HiTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACA82D9CFE53C68793AFEA59 /* Pods_Running_Hi_Running_HiTests.framework */; };
-		250AB395CE8BFA3A8FF3BA5D /* Pods_Running_Hi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97A47DF3E7456218702A92A3 /* Pods_Running_Hi.framework */; };
 		5318E085294B30670053EDDE /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5318E084294B30670053EDDE /* AuthenticationViewController.swift */; };
 		534C2190295083D5000A3A0E /* SignUpNameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534C218F295083D5000A3A0E /* SignUpNameViewModel.swift */; };
 		534C2192295087CA000A3A0E /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534C2191295087CA000A3A0E /* Coordinator.swift */; };
@@ -18,7 +16,6 @@
 		53E61C8B2955B232003A5E78 /* ServerServiceAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E61C8A2955B232003A5E78 /* ServerServiceAPI.swift */; };
 		53E61C8D2955B5A5003A5E78 /* OAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E61C8C2955B5A5003A5E78 /* OAuth.swift */; };
 		53E61C912956FC31003A5E78 /* JwtData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E61C902956FC31003A5E78 /* JwtData.swift */; };
-		53E61CA22958747D003A5E78 /* ServerServiceAPIManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E61CA12958747D003A5E78 /* ServerServiceAPIManagerTests.swift */; };
 		53E8F988294DB69300E7CCAD /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E8F987294DB69300E7CCAD /* AuthenticationViewModel.swift */; };
 		53E8F98D294DDF4F00E7CCAD /* KakaoNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E8F98C294DDF4F00E7CCAD /* KakaoNetworkService.swift */; };
 		53F6172629616B7B00C605E7 /* JwtDataServerDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F6172529616B7B00C605E7 /* JwtDataServerDTO.swift */; };
@@ -32,6 +29,14 @@
 		53F6173B29658B5400C605E7 /* KakaoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F6173A29658B5400C605E7 /* KakaoRepository.swift */; };
 		53F6173D29658BA800C605E7 /* KakaoRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F6173C29658BA800C605E7 /* KakaoRepositoryProtocol.swift */; };
 		53F6173F2965964300C605E7 /* KakaoAuthProvideUseCaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F6173E2965964300C605E7 /* KakaoAuthProvideUseCaseProtocol.swift */; };
+		53F617A92968067300C605E7 /* KakaoAuthProvideUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F617A82968067300C605E7 /* KakaoAuthProvideUseCaseTest.swift */; };
+		53F617B22968072E00C605E7 /* DummyKakaoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F617B12968072E00C605E7 /* DummyKakaoRepository.swift */; };
+		53F617B42968166F00C605E7 /* DummyError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F617B32968166F00C605E7 /* DummyError.swift */; };
+		53F617B62968342600C605E7 /* DummyToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F617B52968342600C605E7 /* DummyToken.swift */; };
+		53F617B72968396900C605E7 /* Pods_Running_Hi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97A47DF3E7456218702A92A3 /* Pods_Running_Hi.framework */; };
+		53F617B82968396900C605E7 /* Pods_Running_Hi.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 97A47DF3E7456218702A92A3 /* Pods_Running_Hi.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		53F617DB296C2CB800C605E7 /* GetJwtUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F617DA296C2CB800C605E7 /* GetJwtUseCaseTest.swift */; };
+		53F617E2296C2D4900C605E7 /* DummyLoginRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F617E1296C2D4900C605E7 /* DummyLoginRepository.swift */; };
 		53F6A34E294EE299000B5E33 /* ServerNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F6A34D294EE299000B5E33 /* ServerNetworkService.swift */; };
 		53F6A352294EF63A000B5E33 /* SignUpNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F6A351294EF63A000B5E33 /* SignUpNameViewController.swift */; };
 		53F6A356294EFF90000B5E33 /* RunninghiTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F6A355294EFF90000B5E33 /* RunninghiTextField.swift */; };
@@ -42,7 +47,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		53E61C9A29587268003A5E78 /* PBXContainerItemProxy */ = {
+		53F617AA2968067300C605E7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C14FAC702941F4510057C3DB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C14FAC772941F4510057C3DB;
+			remoteInfo = Running_Hi;
+		};
+		53F617DC296C2CB800C605E7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C14FAC702941F4510057C3DB /* Project object */;
 			proxyType = 1;
@@ -50,6 +62,20 @@
 			remoteInfo = Running_Hi;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		53F617B92968396900C605E7 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				53F617B82968396900C605E7 /* Pods_Running_Hi.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		2CC8834339157F168724CD63 /* Pods-Running_Hi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Running_Hi.release.xcconfig"; path = "Target Support Files/Pods-Running_Hi/Pods-Running_Hi.release.xcconfig"; sourceTree = "<group>"; };
@@ -63,8 +89,6 @@
 		53E61C8A2955B232003A5E78 /* ServerServiceAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerServiceAPI.swift; sourceTree = "<group>"; };
 		53E61C8C2955B5A5003A5E78 /* OAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuth.swift; sourceTree = "<group>"; };
 		53E61C902956FC31003A5E78 /* JwtData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JwtData.swift; sourceTree = "<group>"; };
-		53E61C9629587268003A5E78 /* Running_HiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Running_HiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		53E61CA12958747D003A5E78 /* ServerServiceAPIManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerServiceAPIManagerTests.swift; sourceTree = "<group>"; };
 		53E8F987294DB69300E7CCAD /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
 		53E8F98C294DDF4F00E7CCAD /* KakaoNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoNetworkService.swift; sourceTree = "<group>"; };
 		53F6172529616B7B00C605E7 /* JwtDataServerDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JwtDataServerDTO.swift; sourceTree = "<group>"; };
@@ -79,6 +103,16 @@
 		53F6173C29658BA800C605E7 /* KakaoRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoRepositoryProtocol.swift; sourceTree = "<group>"; };
 		53F6173E2965964300C605E7 /* KakaoAuthProvideUseCaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoAuthProvideUseCaseProtocol.swift; sourceTree = "<group>"; };
 		53F617682965A1BC00C605E7 /* Running_Hi copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Running_Hi copy-Info.plist"; path = "/Users/anjongpyo/Desktop/RunningHi/swift/Running_Hi copy-Info.plist"; sourceTree = "<absolute>"; };
+		53F617A62968067300C605E7 /* KakaoAuthProvideUseCaseTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KakaoAuthProvideUseCaseTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		53F617A82968067300C605E7 /* KakaoAuthProvideUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoAuthProvideUseCaseTest.swift; sourceTree = "<group>"; };
+		53F617B12968072E00C605E7 /* DummyKakaoRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DummyKakaoRepository.swift; path = ../../../../../Documents/DummyKakaoRepository.swift; sourceTree = "<group>"; };
+		53F617B32968166F00C605E7 /* DummyError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DummyError.swift; path = ../../../../../Documents/DummyError.swift; sourceTree = "<group>"; };
+		53F617B52968342600C605E7 /* DummyToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DummyToken.swift; path = ../../../../../Documents/DummyToken.swift; sourceTree = "<group>"; };
+		53F617BA29683A7800C605E7 /* FBSDKCoreKit_Basics.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FBSDKCoreKit_Basics.xcframework; path = Pods/FBSDKCoreKit_Basics/XCFrameworks/FBSDKCoreKit_Basics.xcframework; sourceTree = "<group>"; };
+		53F617BB29683A7800C605E7 /* FBSDKCoreKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FBSDKCoreKit.xcframework; path = Pods/FBSDKCoreKit/XCFrameworks/FBSDKCoreKit.xcframework; sourceTree = "<group>"; };
+		53F617D8296C2CB800C605E7 /* GetJwtUseCaseTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GetJwtUseCaseTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		53F617DA296C2CB800C605E7 /* GetJwtUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetJwtUseCaseTest.swift; sourceTree = "<group>"; };
+		53F617E1296C2D4900C605E7 /* DummyLoginRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DummyLoginRepository.swift; path = ../../../../DummyLoginRepository.swift; sourceTree = "<group>"; };
 		53F6A34D294EE299000B5E33 /* ServerNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerNetworkService.swift; sourceTree = "<group>"; };
 		53F6A351294EF63A000B5E33 /* SignUpNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpNameViewController.swift; sourceTree = "<group>"; };
 		53F6A355294EFF90000B5E33 /* RunninghiTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunninghiTextField.swift; sourceTree = "<group>"; };
@@ -95,11 +129,17 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		53E61C9329587268003A5E78 /* Frameworks */ = {
+		53F617A32968067300C605E7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07966AA9B52DD2C502F3BF29 /* Pods_Running_Hi_Running_HiTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		53F617D5296C2CB800C605E7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,7 +147,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				250AB395CE8BFA3A8FF3BA5D /* Pods_Running_Hi.framework in Frameworks */,
+				53F617B72968396900C605E7 /* Pods_Running_Hi.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,6 +157,8 @@
 		3560BA8E8AB7304254C43E9F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				53F617BA29683A7800C605E7 /* FBSDKCoreKit_Basics.xcframework */,
+				53F617BB29683A7800C605E7 /* FBSDKCoreKit.xcframework */,
 				97A47DF3E7456218702A92A3 /* Pods_Running_Hi.framework */,
 				ACA82D9CFE53C68793AFEA59 /* Pods_Running_Hi_Running_HiTests.framework */,
 			);
@@ -160,14 +202,6 @@
 				53E61C902956FC31003A5E78 /* JwtData.swift */,
 			);
 			path = Entities;
-			sourceTree = "<group>";
-		};
-		53E61C9729587268003A5E78 /* Running_HiTests */ = {
-			isa = PBXGroup;
-			children = (
-				53E61CA12958747D003A5E78 /* ServerServiceAPIManagerTests.swift */,
-			);
-			path = Running_HiTests;
 			sourceTree = "<group>";
 		};
 		53E8F98A294DDF2600E7CCAD /* Service */ = {
@@ -260,6 +294,43 @@
 			path = UseCases;
 			sourceTree = "<group>";
 		};
+		53F617A72968067300C605E7 /* KakaoAuthProvideUseCase */ = {
+			isa = PBXGroup;
+			children = (
+				53F617A82968067300C605E7 /* KakaoAuthProvideUseCaseTest.swift */,
+			);
+			path = KakaoAuthProvideUseCase;
+			sourceTree = "<group>";
+		};
+		53F617AF2968068E00C605E7 /* Dummies */ = {
+			isa = PBXGroup;
+			children = (
+				53F617B32968166F00C605E7 /* DummyError.swift */,
+				53F617B52968342600C605E7 /* DummyToken.swift */,
+				53F617B12968072E00C605E7 /* DummyKakaoRepository.swift */,
+				53F617E1296C2D4900C605E7 /* DummyLoginRepository.swift */,
+			);
+			path = Dummies;
+			sourceTree = "<group>";
+		};
+		53F617B02968069400C605E7 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				53F617D9296C2CB800C605E7 /* GetJwtUseCaseTest */,
+				53F617A72968067300C605E7 /* KakaoAuthProvideUseCase */,
+				53F617AF2968068E00C605E7 /* Dummies */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		53F617D9296C2CB800C605E7 /* GetJwtUseCaseTest */ = {
+			isa = PBXGroup;
+			children = (
+				53F617DA296C2CB800C605E7 /* GetJwtUseCaseTest.swift */,
+			);
+			path = GetJwtUseCaseTest;
+			sourceTree = "<group>";
+		};
 		53F6A350294EF60B000B5E33 /* SignUpScene */ = {
 			isa = PBXGroup;
 			children = (
@@ -301,8 +372,8 @@
 		C14FAC6F2941F4510057C3DB = {
 			isa = PBXGroup;
 			children = (
+				53F617B02968069400C605E7 /* Tests */,
 				C14FAC7A2941F4510057C3DB /* Running_Hi */,
-				53E61C9729587268003A5E78 /* Running_HiTests */,
 				C14FAC792941F4510057C3DB /* Products */,
 				B126A313C9ED0F13DFF447F1 /* Pods */,
 				3560BA8E8AB7304254C43E9F /* Frameworks */,
@@ -314,7 +385,8 @@
 			isa = PBXGroup;
 			children = (
 				C14FAC782941F4510057C3DB /* Running_Hi.app */,
-				53E61C9629587268003A5E78 /* Running_HiTests.xctest */,
+				53F617A62968067300C605E7 /* KakaoAuthProvideUseCaseTest.xctest */,
+				53F617D8296C2CB800C605E7 /* GetJwtUseCaseTest.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -339,24 +411,40 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		53E61C9529587268003A5E78 /* Running_HiTests */ = {
+		53F617A52968067300C605E7 /* KakaoAuthProvideUseCaseTest */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 53E61C9C29587268003A5E78 /* Build configuration list for PBXNativeTarget "Running_HiTests" */;
+			buildConfigurationList = 53F617AC2968067300C605E7 /* Build configuration list for PBXNativeTarget "KakaoAuthProvideUseCaseTest" */;
 			buildPhases = (
-				0503AADC775601BB55133DC4 /* [CP] Check Pods Manifest.lock */,
-				53E61C9229587268003A5E78 /* Sources */,
-				53E61C9329587268003A5E78 /* Frameworks */,
-				53E61C9429587268003A5E78 /* Resources */,
-				1EBFF4A7837EA97C676E4B80 /* [CP] Embed Pods Frameworks */,
+				53F617A22968067300C605E7 /* Sources */,
+				53F617A32968067300C605E7 /* Frameworks */,
+				53F617A42968067300C605E7 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				53E61C9B29587268003A5E78 /* PBXTargetDependency */,
+				53F617AB2968067300C605E7 /* PBXTargetDependency */,
 			);
-			name = Running_HiTests;
-			productName = Running_HiTests;
-			productReference = 53E61C9629587268003A5E78 /* Running_HiTests.xctest */;
+			name = KakaoAuthProvideUseCaseTest;
+			productName = KakaoAuthProvideUseCase;
+			productReference = 53F617A62968067300C605E7 /* KakaoAuthProvideUseCaseTest.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		53F617D7296C2CB800C605E7 /* GetJwtUseCaseTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 53F617E0296C2CB800C605E7 /* Build configuration list for PBXNativeTarget "GetJwtUseCaseTest" */;
+			buildPhases = (
+				53F617D4296C2CB800C605E7 /* Sources */,
+				53F617D5296C2CB800C605E7 /* Frameworks */,
+				53F617D6296C2CB800C605E7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				53F617DD296C2CB800C605E7 /* PBXTargetDependency */,
+			);
+			name = GetJwtUseCaseTest;
+			productName = GetJwtUseCaseTest;
+			productReference = 53F617D8296C2CB800C605E7 /* GetJwtUseCaseTest.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		C14FAC772941F4510057C3DB /* Running_Hi */ = {
@@ -368,6 +456,7 @@
 				C14FAC752941F4510057C3DB /* Frameworks */,
 				C14FAC762941F4510057C3DB /* Resources */,
 				ED27EA2C95D29E33FF495DD0 /* [CP] Embed Pods Frameworks */,
+				53F617B92968396900C605E7 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -388,7 +477,11 @@
 				LastSwiftUpdateCheck = 1420;
 				LastUpgradeCheck = 1410;
 				TargetAttributes = {
-					53E61C9529587268003A5E78 = {
+					53F617A52968067300C605E7 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = C14FAC772941F4510057C3DB;
+					};
+					53F617D7296C2CB800C605E7 = {
 						CreatedOnToolsVersion = 14.2;
 						TestTargetID = C14FAC772941F4510057C3DB;
 					};
@@ -411,13 +504,21 @@
 			projectRoot = "";
 			targets = (
 				C14FAC772941F4510057C3DB /* Running_Hi */,
-				53E61C9529587268003A5E78 /* Running_HiTests */,
+				53F617A52968067300C605E7 /* KakaoAuthProvideUseCaseTest */,
+				53F617D7296C2CB800C605E7 /* GetJwtUseCaseTest */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		53E61C9429587268003A5E78 /* Resources */ = {
+		53F617A42968067300C605E7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		53F617D6296C2CB800C605E7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -436,45 +537,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0503AADC775601BB55133DC4 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Running_Hi-Running_HiTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		1EBFF4A7837EA97C676E4B80 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Running_Hi-Running_HiTests/Pods-Running_Hi-Running_HiTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Running_Hi-Running_HiTests/Pods-Running_Hi-Running_HiTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Running_Hi-Running_HiTests/Pods-Running_Hi-Running_HiTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		A9954EB9B32C302A7541F883 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -517,11 +579,19 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		53E61C9229587268003A5E78 /* Sources */ = {
+		53F617A22968067300C605E7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				53E61CA22958747D003A5E78 /* ServerServiceAPIManagerTests.swift in Sources */,
+				53F617A92968067300C605E7 /* KakaoAuthProvideUseCaseTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		53F617D4296C2CB800C605E7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53F617DB296C2CB800C605E7 /* GetJwtUseCaseTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -533,10 +603,13 @@
 				53E61C912956FC31003A5E78 /* JwtData.swift in Sources */,
 				534C219629508F24000A3A0E /* AppCoordinator.swift in Sources */,
 				534C2192295087CA000A3A0E /* Coordinator.swift in Sources */,
+				53F617B42968166F00C605E7 /* DummyError.swift in Sources */,
 				53F6173229644B8400C605E7 /* LoginRepositoryProtocol.swift in Sources */,
+				53F617B62968342600C605E7 /* DummyToken.swift in Sources */,
 				53F61737296580ED00C605E7 /* KakaoAuthProvideUseCase.swift in Sources */,
 				C14FAC7C2941F4510057C3DB /* AppDelegate.swift in Sources */,
 				53F6A356294EFF90000B5E33 /* RunninghiTextField.swift in Sources */,
+				53F617E2296C2D4900C605E7 /* DummyLoginRepository.swift in Sources */,
 				53F6173029644AF900C605E7 /* LoginRepository.swift in Sources */,
 				534C21942950884F000A3A0E /* AutheticationViewCoordinator.swift in Sources */,
 				53F6172A2964484700C605E7 /* GetJwtUseCase.swift in Sources */,
@@ -549,6 +622,7 @@
 				53F6A352294EF63A000B5E33 /* SignUpNameViewController.swift in Sources */,
 				53F6A34E294EE299000B5E33 /* ServerNetworkService.swift in Sources */,
 				53F6172629616B7B00C605E7 /* JwtDataServerDTO.swift in Sources */,
+				53F617B22968072E00C605E7 /* DummyKakaoRepository.swift in Sources */,
 				C14FAC7E2941F4510057C3DB /* SceneDelegate.swift in Sources */,
 				53E61C8B2955B232003A5E78 /* ServerServiceAPI.swift in Sources */,
 				534C219D295324CE000A3A0E /* User.swift in Sources */,
@@ -562,10 +636,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		53E61C9B29587268003A5E78 /* PBXTargetDependency */ = {
+		53F617AB2968067300C605E7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = C14FAC772941F4510057C3DB /* Running_Hi */;
-			targetProxy = 53E61C9A29587268003A5E78 /* PBXContainerItemProxy */;
+			targetProxy = 53F617AA2968067300C605E7 /* PBXContainerItemProxy */;
+		};
+		53F617DD296C2CB800C605E7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C14FAC772941F4510057C3DB /* Running_Hi */;
+			targetProxy = 53F617DC296C2CB800C605E7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -581,9 +660,8 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		53E61C9D29587268003A5E78 /* Debug */ = {
+		53F617AD2968067300C605E7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3CF8EC2FB90CE9F5F0737E06 /* Pods-Running_Hi-Running_HiTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -593,7 +671,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.jonpyoAhn.Running-HiTests";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jonpyoAhn.KakaoAuthProvideUseCase;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
@@ -604,9 +682,8 @@
 			};
 			name = Debug;
 		};
-		53E61C9E29587268003A5E78 /* Release */ = {
+		53F617AE2968067300C605E7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6565CA4036C5BD2165220641 /* Pods-Running_Hi-Running_HiTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -616,7 +693,51 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.jonpyoAhn.Running-HiTests";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jonpyoAhn.KakaoAuthProvideUseCase;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Running_Hi.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Running_Hi";
+			};
+			name = Release;
+		};
+		53F617DE296C2CB800C605E7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5UYBRX8UM9;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jonpyoAhn.GetJwtUseCaseTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Running_Hi.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Running_Hi";
+			};
+			name = Debug;
+		};
+		53F617DF296C2CB800C605E7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5UYBRX8UM9;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jonpyoAhn.GetJwtUseCaseTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
@@ -723,7 +844,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
+				ENABLE_TESTABILITY = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -810,11 +931,20 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		53E61C9C29587268003A5E78 /* Build configuration list for PBXNativeTarget "Running_HiTests" */ = {
+		53F617AC2968067300C605E7 /* Build configuration list for PBXNativeTarget "KakaoAuthProvideUseCaseTest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				53E61C9D29587268003A5E78 /* Debug */,
-				53E61C9E29587268003A5E78 /* Release */,
+				53F617AD2968067300C605E7 /* Debug */,
+				53F617AE2968067300C605E7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		53F617E0296C2CB800C605E7 /* Build configuration list for PBXNativeTarget "GetJwtUseCaseTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				53F617DE296C2CB800C605E7 /* Debug */,
+				53F617DF296C2CB800C605E7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

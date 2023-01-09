@@ -40,7 +40,6 @@ final class KakaoAuthProvideUseCase: KakaoAuthProvideUseCaseProtocol{
                 self?.gotKakaoAccessToken = kakaoAccessToken
             }
             .store(in: &subscription)
-
     }
     
     
