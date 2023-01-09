@@ -3,51 +3,381 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5318E085294B30670053EDDE /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5318E084294B30670053EDDE /* AuthenticationViewController.swift */; };
+		534C2190295083D5000A3A0E /* SignUpNameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534C218F295083D5000A3A0E /* SignUpNameViewModel.swift */; };
+		534C2192295087CA000A3A0E /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534C2191295087CA000A3A0E /* Coordinator.swift */; };
+		534C21942950884F000A3A0E /* AutheticationViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534C21932950884F000A3A0E /* AutheticationViewCoordinator.swift */; };
+		534C219629508F24000A3A0E /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534C219529508F24000A3A0E /* AppCoordinator.swift */; };
+		534C219D295324CE000A3A0E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534C219C295324CE000A3A0E /* User.swift */; };
+		53E61C8B2955B232003A5E78 /* ServerServiceAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E61C8A2955B232003A5E78 /* ServerServiceAPI.swift */; };
+		53E61C8D2955B5A5003A5E78 /* OAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E61C8C2955B5A5003A5E78 /* OAuth.swift */; };
+		53E61C912956FC31003A5E78 /* JwtData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E61C902956FC31003A5E78 /* JwtData.swift */; };
+		53E8F988294DB69300E7CCAD /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E8F987294DB69300E7CCAD /* AuthenticationViewModel.swift */; };
+		53E8F98D294DDF4F00E7CCAD /* KakaoNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E8F98C294DDF4F00E7CCAD /* KakaoNetworkService.swift */; };
+		53F6172629616B7B00C605E7 /* JwtDataServerDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F6172529616B7B00C605E7 /* JwtDataServerDTO.swift */; };
+		53F6172A2964484700C605E7 /* GetJwtUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F617292964484700C605E7 /* GetJwtUseCase.swift */; };
+		53F6172C2964487A00C605E7 /* GetJwtUseCaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F6172B2964487A00C605E7 /* GetJwtUseCaseProtocol.swift */; };
+		53F6173029644AF900C605E7 /* LoginRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F6172F29644AF900C605E7 /* LoginRepository.swift */; };
+		53F6173229644B8400C605E7 /* LoginRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F6173129644B8400C605E7 /* LoginRepositoryProtocol.swift */; };
+		53F617352964505700C605E7 /* ServerNetworkServcieProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F617342964505700C605E7 /* ServerNetworkServcieProtocol.swift */; };
+		53F61737296580ED00C605E7 /* KakaoAuthProvideUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F61736296580ED00C605E7 /* KakaoAuthProvideUseCase.swift */; };
+		53F6173929658B0F00C605E7 /* KaKaoNetworkServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F6173829658B0F00C605E7 /* KaKaoNetworkServiceProtocol.swift */; };
+		53F6173B29658B5400C605E7 /* KakaoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F6173A29658B5400C605E7 /* KakaoRepository.swift */; };
+		53F6173D29658BA800C605E7 /* KakaoRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F6173C29658BA800C605E7 /* KakaoRepositoryProtocol.swift */; };
+		53F6173F2965964300C605E7 /* KakaoAuthProvideUseCaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F6173E2965964300C605E7 /* KakaoAuthProvideUseCaseProtocol.swift */; };
+		53F617A92968067300C605E7 /* KakaoAuthProvideUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F617A82968067300C605E7 /* KakaoAuthProvideUseCaseTest.swift */; };
+		53F617B22968072E00C605E7 /* DummyKakaoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F617B12968072E00C605E7 /* DummyKakaoRepository.swift */; };
+		53F617B42968166F00C605E7 /* DummyError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F617B32968166F00C605E7 /* DummyError.swift */; };
+		53F617B62968342600C605E7 /* DummyToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F617B52968342600C605E7 /* DummyToken.swift */; };
+		53F617B72968396900C605E7 /* Pods_Running_Hi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97A47DF3E7456218702A92A3 /* Pods_Running_Hi.framework */; };
+		53F617B82968396900C605E7 /* Pods_Running_Hi.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 97A47DF3E7456218702A92A3 /* Pods_Running_Hi.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		53F617DB296C2CB800C605E7 /* GetJwtUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F617DA296C2CB800C605E7 /* GetJwtUseCaseTest.swift */; };
+		53F617E2296C2D4900C605E7 /* DummyLoginRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F617E1296C2D4900C605E7 /* DummyLoginRepository.swift */; };
+		53F6A34E294EE299000B5E33 /* ServerNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F6A34D294EE299000B5E33 /* ServerNetworkService.swift */; };
+		53F6A352294EF63A000B5E33 /* SignUpNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F6A351294EF63A000B5E33 /* SignUpNameViewController.swift */; };
+		53F6A356294EFF90000B5E33 /* RunninghiTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F6A355294EFF90000B5E33 /* RunninghiTextField.swift */; };
 		C14FAC7C2941F4510057C3DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14FAC7B2941F4510057C3DB /* AppDelegate.swift */; };
 		C14FAC7E2941F4510057C3DB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14FAC7D2941F4510057C3DB /* SceneDelegate.swift */; };
 		C14FAC852941F4520057C3DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C14FAC842941F4520057C3DB /* Assets.xcassets */; };
 		C14FAC882941F4520057C3DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C14FAC862941F4520057C3DB /* LaunchScreen.storyboard */; };
-		C14FAC952941F60C0057C3DB /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14FAC942941F60C0057C3DB /* TabBarController.swift */; };
-		C14FAC972941F7390057C3DB /* FeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14FAC962941F7390057C3DB /* FeedController.swift */; };
-		C14FAC992941F7400057C3DB /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14FAC982941F7400057C3DB /* SearchController.swift */; };
-		C14FAC9B2941F7550057C3DB /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14FAC9A2941F7550057C3DB /* ProfileController.swift */; };
-		C14FAC9D2941F8E10057C3DB /* PhotoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14FAC9C2941F8E10057C3DB /* PhotoController.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		53F617AA2968067300C605E7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C14FAC702941F4510057C3DB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C14FAC772941F4510057C3DB;
+			remoteInfo = Running_Hi;
+		};
+		53F617DC296C2CB800C605E7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C14FAC702941F4510057C3DB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C14FAC772941F4510057C3DB;
+			remoteInfo = Running_Hi;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		53F617B92968396900C605E7 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				53F617B82968396900C605E7 /* Pods_Running_Hi.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		2CC8834339157F168724CD63 /* Pods-Running_Hi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Running_Hi.release.xcconfig"; path = "Target Support Files/Pods-Running_Hi/Pods-Running_Hi.release.xcconfig"; sourceTree = "<group>"; };
+		3CF8EC2FB90CE9F5F0737E06 /* Pods-Running_Hi-Running_HiTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Running_Hi-Running_HiTests.debug.xcconfig"; path = "Target Support Files/Pods-Running_Hi-Running_HiTests/Pods-Running_Hi-Running_HiTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5318E084294B30670053EDDE /* AuthenticationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewController.swift; sourceTree = "<group>"; };
+		534C218F295083D5000A3A0E /* SignUpNameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpNameViewModel.swift; sourceTree = "<group>"; };
+		534C2191295087CA000A3A0E /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		534C21932950884F000A3A0E /* AutheticationViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutheticationViewCoordinator.swift; sourceTree = "<group>"; };
+		534C219529508F24000A3A0E /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		534C219C295324CE000A3A0E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		53E61C8A2955B232003A5E78 /* ServerServiceAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerServiceAPI.swift; sourceTree = "<group>"; };
+		53E61C8C2955B5A5003A5E78 /* OAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuth.swift; sourceTree = "<group>"; };
+		53E61C902956FC31003A5E78 /* JwtData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JwtData.swift; sourceTree = "<group>"; };
+		53E8F987294DB69300E7CCAD /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
+		53E8F98C294DDF4F00E7CCAD /* KakaoNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoNetworkService.swift; sourceTree = "<group>"; };
+		53F6172529616B7B00C605E7 /* JwtDataServerDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JwtDataServerDTO.swift; sourceTree = "<group>"; };
+		53F617292964484700C605E7 /* GetJwtUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetJwtUseCase.swift; sourceTree = "<group>"; };
+		53F6172B2964487A00C605E7 /* GetJwtUseCaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetJwtUseCaseProtocol.swift; sourceTree = "<group>"; };
+		53F6172F29644AF900C605E7 /* LoginRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRepository.swift; sourceTree = "<group>"; };
+		53F6173129644B8400C605E7 /* LoginRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRepositoryProtocol.swift; sourceTree = "<group>"; };
+		53F617342964505700C605E7 /* ServerNetworkServcieProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerNetworkServcieProtocol.swift; sourceTree = "<group>"; };
+		53F61736296580ED00C605E7 /* KakaoAuthProvideUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoAuthProvideUseCase.swift; sourceTree = "<group>"; };
+		53F6173829658B0F00C605E7 /* KaKaoNetworkServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaKaoNetworkServiceProtocol.swift; sourceTree = "<group>"; };
+		53F6173A29658B5400C605E7 /* KakaoRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoRepository.swift; sourceTree = "<group>"; };
+		53F6173C29658BA800C605E7 /* KakaoRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoRepositoryProtocol.swift; sourceTree = "<group>"; };
+		53F6173E2965964300C605E7 /* KakaoAuthProvideUseCaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoAuthProvideUseCaseProtocol.swift; sourceTree = "<group>"; };
+		53F617682965A1BC00C605E7 /* Running_Hi copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Running_Hi copy-Info.plist"; path = "/Users/anjongpyo/Desktop/RunningHi/swift/Running_Hi copy-Info.plist"; sourceTree = "<absolute>"; };
+		53F617A62968067300C605E7 /* KakaoAuthProvideUseCaseTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KakaoAuthProvideUseCaseTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		53F617A82968067300C605E7 /* KakaoAuthProvideUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoAuthProvideUseCaseTest.swift; sourceTree = "<group>"; };
+		53F617B12968072E00C605E7 /* DummyKakaoRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DummyKakaoRepository.swift; path = ../../../../../Documents/DummyKakaoRepository.swift; sourceTree = "<group>"; };
+		53F617B32968166F00C605E7 /* DummyError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DummyError.swift; path = ../../../../../Documents/DummyError.swift; sourceTree = "<group>"; };
+		53F617B52968342600C605E7 /* DummyToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DummyToken.swift; path = ../../../../../Documents/DummyToken.swift; sourceTree = "<group>"; };
+		53F617BA29683A7800C605E7 /* FBSDKCoreKit_Basics.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FBSDKCoreKit_Basics.xcframework; path = Pods/FBSDKCoreKit_Basics/XCFrameworks/FBSDKCoreKit_Basics.xcframework; sourceTree = "<group>"; };
+		53F617BB29683A7800C605E7 /* FBSDKCoreKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FBSDKCoreKit.xcframework; path = Pods/FBSDKCoreKit/XCFrameworks/FBSDKCoreKit.xcframework; sourceTree = "<group>"; };
+		53F617D8296C2CB800C605E7 /* GetJwtUseCaseTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GetJwtUseCaseTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		53F617DA296C2CB800C605E7 /* GetJwtUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetJwtUseCaseTest.swift; sourceTree = "<group>"; };
+		53F617E1296C2D4900C605E7 /* DummyLoginRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DummyLoginRepository.swift; path = ../../../../DummyLoginRepository.swift; sourceTree = "<group>"; };
+		53F6A34D294EE299000B5E33 /* ServerNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerNetworkService.swift; sourceTree = "<group>"; };
+		53F6A351294EF63A000B5E33 /* SignUpNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpNameViewController.swift; sourceTree = "<group>"; };
+		53F6A355294EFF90000B5E33 /* RunninghiTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunninghiTextField.swift; sourceTree = "<group>"; };
+		6565CA4036C5BD2165220641 /* Pods-Running_Hi-Running_HiTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Running_Hi-Running_HiTests.release.xcconfig"; path = "Target Support Files/Pods-Running_Hi-Running_HiTests/Pods-Running_Hi-Running_HiTests.release.xcconfig"; sourceTree = "<group>"; };
+		97A47DF3E7456218702A92A3 /* Pods_Running_Hi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Running_Hi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C6E7EFC1C98438D72AEB3A7 /* Pods-Running_Hi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Running_Hi.debug.xcconfig"; path = "Target Support Files/Pods-Running_Hi/Pods-Running_Hi.debug.xcconfig"; sourceTree = "<group>"; };
+		ACA82D9CFE53C68793AFEA59 /* Pods_Running_Hi_Running_HiTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Running_Hi_Running_HiTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C14FAC782941F4510057C3DB /* Running_Hi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Running_Hi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C14FAC7B2941F4510057C3DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C14FAC7D2941F4510057C3DB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		C14FAC842941F4520057C3DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C14FAC872941F4520057C3DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C14FAC892941F4520057C3DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C14FAC942941F60C0057C3DB /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
-		C14FAC962941F7390057C3DB /* FeedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedController.swift; sourceTree = "<group>"; };
-		C14FAC982941F7400057C3DB /* SearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
-		C14FAC9A2941F7550057C3DB /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
-		C14FAC9C2941F8E10057C3DB /* PhotoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		C14FAC752941F4510057C3DB /* Frameworks */ = {
+		53F617A32968067300C605E7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		53F617D5296C2CB800C605E7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C14FAC752941F4510057C3DB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53F617B72968396900C605E7 /* Pods_Running_Hi.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3560BA8E8AB7304254C43E9F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				53F617BA29683A7800C605E7 /* FBSDKCoreKit_Basics.xcframework */,
+				53F617BB29683A7800C605E7 /* FBSDKCoreKit.xcframework */,
+				97A47DF3E7456218702A92A3 /* Pods_Running_Hi.framework */,
+				ACA82D9CFE53C68793AFEA59 /* Pods_Running_Hi_Running_HiTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5318E083294B30550053EDDE /* AuthenticationScene */ = {
+			isa = PBXGroup;
+			children = (
+				5318E084294B30670053EDDE /* AuthenticationViewController.swift */,
+				53E8F987294DB69300E7CCAD /* AuthenticationViewModel.swift */,
+				534C21932950884F000A3A0E /* AutheticationViewCoordinator.swift */,
+			);
+			path = AuthenticationScene;
+			sourceTree = "<group>";
+		};
+		5318E086294B306E0053EDDE /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				C14FAC7B2941F4510057C3DB /* AppDelegate.swift */,
+				C14FAC7D2941F4510057C3DB /* SceneDelegate.swift */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		5353698E294DECA80067374C /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				5353698F294DECB10067374C /* Entities */,
+				53F6171F296160EF00C605E7 /* Interfaces */,
+				53F61720296160F800C605E7 /* UseCases */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		5353698F294DECB10067374C /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				534C219C295324CE000A3A0E /* User.swift */,
+				53E61C8C2955B5A5003A5E78 /* OAuth.swift */,
+				53E61C902956FC31003A5E78 /* JwtData.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		53E8F98A294DDF2600E7CCAD /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				53E8F98B294DDF2B00E7CCAD /* Networks */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		53E8F98B294DDF2B00E7CCAD /* Networks */ = {
+			isa = PBXGroup;
+			children = (
+				53E8F98C294DDF4F00E7CCAD /* KakaoNetworkService.swift */,
+				53F6A34D294EE299000B5E33 /* ServerNetworkService.swift */,
+				53E61C8A2955B232003A5E78 /* ServerServiceAPI.swift */,
+			);
+			path = Networks;
+			sourceTree = "<group>";
+		};
+		53F6171F296160EF00C605E7 /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				53F6172E2964498900C605E7 /* UseCases */,
+				53F6172D2964498100C605E7 /* Repositories */,
+			);
+			path = Interfaces;
+			sourceTree = "<group>";
+		};
+		53F61720296160F800C605E7 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				53F617292964484700C605E7 /* GetJwtUseCase.swift */,
+				53F61736296580ED00C605E7 /* KakaoAuthProvideUseCase.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		53F617212961614400C605E7 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				53F617242961616F00C605E7 /* DataTransferObjects */,
+				53F617232961616A00C605E7 /* Interfaces */,
+				53F617222961616000C605E7 /* Repositories */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		53F617222961616000C605E7 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				53F6172F29644AF900C605E7 /* LoginRepository.swift */,
+				53F6173A29658B5400C605E7 /* KakaoRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		53F617232961616A00C605E7 /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				53F617342964505700C605E7 /* ServerNetworkServcieProtocol.swift */,
+				53F6173829658B0F00C605E7 /* KaKaoNetworkServiceProtocol.swift */,
+			);
+			path = Interfaces;
+			sourceTree = "<group>";
+		};
+		53F617242961616F00C605E7 /* DataTransferObjects */ = {
+			isa = PBXGroup;
+			children = (
+				53F6172529616B7B00C605E7 /* JwtDataServerDTO.swift */,
+			);
+			path = DataTransferObjects;
+			sourceTree = "<group>";
+		};
+		53F6172D2964498100C605E7 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				53F6173129644B8400C605E7 /* LoginRepositoryProtocol.swift */,
+				53F6173C29658BA800C605E7 /* KakaoRepositoryProtocol.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		53F6172E2964498900C605E7 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				53F6172B2964487A00C605E7 /* GetJwtUseCaseProtocol.swift */,
+				53F6173E2965964300C605E7 /* KakaoAuthProvideUseCaseProtocol.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		53F617A72968067300C605E7 /* KakaoAuthProvideUseCase */ = {
+			isa = PBXGroup;
+			children = (
+				53F617A82968067300C605E7 /* KakaoAuthProvideUseCaseTest.swift */,
+			);
+			path = KakaoAuthProvideUseCase;
+			sourceTree = "<group>";
+		};
+		53F617AF2968068E00C605E7 /* Dummies */ = {
+			isa = PBXGroup;
+			children = (
+				53F617B32968166F00C605E7 /* DummyError.swift */,
+				53F617B52968342600C605E7 /* DummyToken.swift */,
+				53F617B12968072E00C605E7 /* DummyKakaoRepository.swift */,
+				53F617E1296C2D4900C605E7 /* DummyLoginRepository.swift */,
+			);
+			path = Dummies;
+			sourceTree = "<group>";
+		};
+		53F617B02968069400C605E7 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				53F617D9296C2CB800C605E7 /* GetJwtUseCaseTest */,
+				53F617A72968067300C605E7 /* KakaoAuthProvideUseCase */,
+				53F617AF2968068E00C605E7 /* Dummies */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		53F617D9296C2CB800C605E7 /* GetJwtUseCaseTest */ = {
+			isa = PBXGroup;
+			children = (
+				53F617DA296C2CB800C605E7 /* GetJwtUseCaseTest.swift */,
+			);
+			path = GetJwtUseCaseTest;
+			sourceTree = "<group>";
+		};
+		53F6A350294EF60B000B5E33 /* SignUpScene */ = {
+			isa = PBXGroup;
+			children = (
+				53F6A351294EF63A000B5E33 /* SignUpNameViewController.swift */,
+				534C218F295083D5000A3A0E /* SignUpNameViewModel.swift */,
+			);
+			path = SignUpScene;
+			sourceTree = "<group>";
+		};
+		53F6A353294EFF67000B5E33 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				53F6A354294EFF6E000B5E33 /* View */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		53F6A354294EFF6E000B5E33 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				534C2191295087CA000A3A0E /* Coordinator.swift */,
+				534C219529508F24000A3A0E /* AppCoordinator.swift */,
+				53F6A355294EFF90000B5E33 /* RunninghiTextField.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B126A313C9ED0F13DFF447F1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9C6E7EFC1C98438D72AEB3A7 /* Pods-Running_Hi.debug.xcconfig */,
+				2CC8834339157F168724CD63 /* Pods-Running_Hi.release.xcconfig */,
+				3CF8EC2FB90CE9F5F0737E06 /* Pods-Running_Hi-Running_HiTests.debug.xcconfig */,
+				6565CA4036C5BD2165220641 /* Pods-Running_Hi-Running_HiTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		C14FAC6F2941F4510057C3DB = {
 			isa = PBXGroup;
 			children = (
+				53F617B02968069400C605E7 /* Tests */,
 				C14FAC7A2941F4510057C3DB /* Running_Hi */,
 				C14FAC792941F4510057C3DB /* Products */,
+				B126A313C9ED0F13DFF447F1 /* Pods */,
+				3560BA8E8AB7304254C43E9F /* Frameworks */,
+				53F617682965A1BC00C605E7 /* Running_Hi copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,6 +385,8 @@
 			isa = PBXGroup;
 			children = (
 				C14FAC782941F4510057C3DB /* Running_Hi.app */,
+				53F617A62968067300C605E7 /* KakaoAuthProvideUseCaseTest.xctest */,
+				53F617D8296C2CB800C605E7 /* GetJwtUseCaseTest.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -62,13 +394,13 @@
 		C14FAC7A2941F4510057C3DB /* Running_Hi */ = {
 			isa = PBXGroup;
 			children = (
-				C14FAC932941F5DA0057C3DB /* Service */,
-				C14FAC922941F5D00057C3DB /* Model */,
-				C14FAC912941F5C40057C3DB /* ViewModel */,
-				C14FAC902941F5BE0057C3DB /* View */,
-				C14FAC8F2941F5B50057C3DB /* Controller */,
-				C14FAC7B2941F4510057C3DB /* AppDelegate.swift */,
-				C14FAC7D2941F4510057C3DB /* SceneDelegate.swift */,
+				5353698E294DECA80067374C /* Domain */,
+				53F617212961614400C605E7 /* Data */,
+				53E8F98A294DDF2600E7CCAD /* Service */,
+				5318E083294B30550053EDDE /* AuthenticationScene */,
+				53F6A350294EF60B000B5E33 /* SignUpScene */,
+				53F6A353294EFF67000B5E33 /* Common */,
+				5318E086294B306E0053EDDE /* Resource */,
 				C14FAC842941F4520057C3DB /* Assets.xcassets */,
 				C14FAC862941F4520057C3DB /* LaunchScreen.storyboard */,
 				C14FAC892941F4520057C3DB /* Info.plist */,
@@ -76,64 +408,55 @@
 			path = Running_Hi;
 			sourceTree = "<group>";
 		};
-		C14FAC8F2941F5B50057C3DB /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				C14FAC9E2941FFE20057C3DB /* Authentication */,
-				C14FAC942941F60C0057C3DB /* TabBarController.swift */,
-				C14FAC962941F7390057C3DB /* FeedController.swift */,
-				C14FAC982941F7400057C3DB /* SearchController.swift */,
-				C14FAC9C2941F8E10057C3DB /* PhotoController.swift */,
-				C14FAC9A2941F7550057C3DB /* ProfileController.swift */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		C14FAC902941F5BE0057C3DB /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		C14FAC912941F5C40057C3DB /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		C14FAC922941F5D00057C3DB /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		C14FAC932941F5DA0057C3DB /* Service */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Service;
-			sourceTree = "<group>";
-		};
-		C14FAC9E2941FFE20057C3DB /* Authentication */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Authentication;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		53F617A52968067300C605E7 /* KakaoAuthProvideUseCaseTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 53F617AC2968067300C605E7 /* Build configuration list for PBXNativeTarget "KakaoAuthProvideUseCaseTest" */;
+			buildPhases = (
+				53F617A22968067300C605E7 /* Sources */,
+				53F617A32968067300C605E7 /* Frameworks */,
+				53F617A42968067300C605E7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				53F617AB2968067300C605E7 /* PBXTargetDependency */,
+			);
+			name = KakaoAuthProvideUseCaseTest;
+			productName = KakaoAuthProvideUseCase;
+			productReference = 53F617A62968067300C605E7 /* KakaoAuthProvideUseCaseTest.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		53F617D7296C2CB800C605E7 /* GetJwtUseCaseTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 53F617E0296C2CB800C605E7 /* Build configuration list for PBXNativeTarget "GetJwtUseCaseTest" */;
+			buildPhases = (
+				53F617D4296C2CB800C605E7 /* Sources */,
+				53F617D5296C2CB800C605E7 /* Frameworks */,
+				53F617D6296C2CB800C605E7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				53F617DD296C2CB800C605E7 /* PBXTargetDependency */,
+			);
+			name = GetJwtUseCaseTest;
+			productName = GetJwtUseCaseTest;
+			productReference = 53F617D8296C2CB800C605E7 /* GetJwtUseCaseTest.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		C14FAC772941F4510057C3DB /* Running_Hi */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C14FAC8C2941F4520057C3DB /* Build configuration list for PBXNativeTarget "Running_Hi" */;
 			buildPhases = (
+				A9954EB9B32C302A7541F883 /* [CP] Check Pods Manifest.lock */,
 				C14FAC742941F4510057C3DB /* Sources */,
 				C14FAC752941F4510057C3DB /* Frameworks */,
 				C14FAC762941F4510057C3DB /* Resources */,
+				ED27EA2C95D29E33FF495DD0 /* [CP] Embed Pods Frameworks */,
+				53F617B92968396900C605E7 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -151,16 +474,24 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1410;
+				LastSwiftUpdateCheck = 1420;
 				LastUpgradeCheck = 1410;
 				TargetAttributes = {
+					53F617A52968067300C605E7 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = C14FAC772941F4510057C3DB;
+					};
+					53F617D7296C2CB800C605E7 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = C14FAC772941F4510057C3DB;
+					};
 					C14FAC772941F4510057C3DB = {
 						CreatedOnToolsVersion = 14.1;
 					};
 				};
 			};
 			buildConfigurationList = C14FAC732941F4510057C3DB /* Build configuration list for PBXProject "Running_Hi" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -173,11 +504,27 @@
 			projectRoot = "";
 			targets = (
 				C14FAC772941F4510057C3DB /* Running_Hi */,
+				53F617A52968067300C605E7 /* KakaoAuthProvideUseCaseTest */,
+				53F617D7296C2CB800C605E7 /* GetJwtUseCaseTest */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		53F617A42968067300C605E7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		53F617D6296C2CB800C605E7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C14FAC762941F4510057C3DB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -189,22 +536,117 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		A9954EB9B32C302A7541F883 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Running_Hi-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ED27EA2C95D29E33FF495DD0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Running_Hi/Pods-Running_Hi-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Running_Hi/Pods-Running_Hi-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Running_Hi/Pods-Running_Hi-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		53F617A22968067300C605E7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53F617A92968067300C605E7 /* KakaoAuthProvideUseCaseTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		53F617D4296C2CB800C605E7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53F617DB296C2CB800C605E7 /* GetJwtUseCaseTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C14FAC742941F4510057C3DB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C14FAC952941F60C0057C3DB /* TabBarController.swift in Sources */,
-				C14FAC992941F7400057C3DB /* SearchController.swift in Sources */,
+				53F6173929658B0F00C605E7 /* KaKaoNetworkServiceProtocol.swift in Sources */,
+				53E61C912956FC31003A5E78 /* JwtData.swift in Sources */,
+				534C219629508F24000A3A0E /* AppCoordinator.swift in Sources */,
+				534C2192295087CA000A3A0E /* Coordinator.swift in Sources */,
+				53F617B42968166F00C605E7 /* DummyError.swift in Sources */,
+				53F6173229644B8400C605E7 /* LoginRepositoryProtocol.swift in Sources */,
+				53F617B62968342600C605E7 /* DummyToken.swift in Sources */,
+				53F61737296580ED00C605E7 /* KakaoAuthProvideUseCase.swift in Sources */,
 				C14FAC7C2941F4510057C3DB /* AppDelegate.swift in Sources */,
-				C14FAC9D2941F8E10057C3DB /* PhotoController.swift in Sources */,
+				53F6A356294EFF90000B5E33 /* RunninghiTextField.swift in Sources */,
+				53F617E2296C2D4900C605E7 /* DummyLoginRepository.swift in Sources */,
+				53F6173029644AF900C605E7 /* LoginRepository.swift in Sources */,
+				534C21942950884F000A3A0E /* AutheticationViewCoordinator.swift in Sources */,
+				53F6172A2964484700C605E7 /* GetJwtUseCase.swift in Sources */,
+				53F617352964505700C605E7 /* ServerNetworkServcieProtocol.swift in Sources */,
+				534C2190295083D5000A3A0E /* SignUpNameViewModel.swift in Sources */,
+				53E8F98D294DDF4F00E7CCAD /* KakaoNetworkService.swift in Sources */,
+				53F6173F2965964300C605E7 /* KakaoAuthProvideUseCaseProtocol.swift in Sources */,
+				53F6173B29658B5400C605E7 /* KakaoRepository.swift in Sources */,
+				5318E085294B30670053EDDE /* AuthenticationViewController.swift in Sources */,
+				53F6A352294EF63A000B5E33 /* SignUpNameViewController.swift in Sources */,
+				53F6A34E294EE299000B5E33 /* ServerNetworkService.swift in Sources */,
+				53F6172629616B7B00C605E7 /* JwtDataServerDTO.swift in Sources */,
+				53F617B22968072E00C605E7 /* DummyKakaoRepository.swift in Sources */,
 				C14FAC7E2941F4510057C3DB /* SceneDelegate.swift in Sources */,
-				C14FAC972941F7390057C3DB /* FeedController.swift in Sources */,
-				C14FAC9B2941F7550057C3DB /* ProfileController.swift in Sources */,
+				53E61C8B2955B232003A5E78 /* ServerServiceAPI.swift in Sources */,
+				534C219D295324CE000A3A0E /* User.swift in Sources */,
+				53E8F988294DB69300E7CCAD /* AuthenticationViewModel.swift in Sources */,
+				53F6172C2964487A00C605E7 /* GetJwtUseCaseProtocol.swift in Sources */,
+				53E61C8D2955B5A5003A5E78 /* OAuth.swift in Sources */,
+				53F6173D29658BA800C605E7 /* KakaoRepositoryProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		53F617AB2968067300C605E7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C14FAC772941F4510057C3DB /* Running_Hi */;
+			targetProxy = 53F617AA2968067300C605E7 /* PBXContainerItemProxy */;
+		};
+		53F617DD296C2CB800C605E7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C14FAC772941F4510057C3DB /* Running_Hi */;
+			targetProxy = 53F617DC296C2CB800C605E7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		C14FAC862941F4520057C3DB /* LaunchScreen.storyboard */ = {
@@ -218,6 +660,94 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		53F617AD2968067300C605E7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5UYBRX8UM9;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jonpyoAhn.KakaoAuthProvideUseCase;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Running_Hi.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Running_Hi";
+			};
+			name = Debug;
+		};
+		53F617AE2968067300C605E7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5UYBRX8UM9;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jonpyoAhn.KakaoAuthProvideUseCase;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Running_Hi.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Running_Hi";
+			};
+			name = Release;
+		};
+		53F617DE296C2CB800C605E7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5UYBRX8UM9;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jonpyoAhn.GetJwtUseCaseTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Running_Hi.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Running_Hi";
+			};
+			name = Debug;
+		};
+		53F617DF296C2CB800C605E7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5UYBRX8UM9;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jonpyoAhn.GetJwtUseCaseTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Running_Hi.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Running_Hi";
+			};
+			name = Release;
+		};
 		C14FAC8A2941F4520057C3DB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -314,6 +844,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -325,6 +856,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -334,12 +866,13 @@
 		};
 		C14FAC8D2941F4520057C3DB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9C6E7EFC1C98438D72AEB3A7 /* Pods-Running_Hi.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = ZD5K45Y4NW;
+				DEVELOPMENT_TEAM = 5UYBRX8UM9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Running_Hi/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -352,7 +885,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.wonsang.Running-Hi";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fourpeople.Running-Hi";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -365,12 +898,13 @@
 		};
 		C14FAC8E2941F4520057C3DB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2CC8834339157F168724CD63 /* Pods-Running_Hi.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = ZD5K45Y4NW;
+				DEVELOPMENT_TEAM = 5UYBRX8UM9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Running_Hi/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -383,7 +917,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.wonsang.Running-Hi";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fourpeople.Running-Hi";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -397,6 +931,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		53F617AC2968067300C605E7 /* Build configuration list for PBXNativeTarget "KakaoAuthProvideUseCaseTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				53F617AD2968067300C605E7 /* Debug */,
+				53F617AE2968067300C605E7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		53F617E0296C2CB800C605E7 /* Build configuration list for PBXNativeTarget "GetJwtUseCaseTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				53F617DE296C2CB800C605E7 /* Debug */,
+				53F617DF296C2CB800C605E7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		C14FAC732941F4510057C3DB /* Build configuration list for PBXProject "Running_Hi" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

@@ -1,0 +1,54 @@
+PODS:
+  - Alamofire (5.6.2)
+  - CombineCocoa (0.4.0)
+  - JWTDecode (3.0.0)
+  - KakaoSDKAuth (2.13.0):
+    - KakaoSDKCommon (= 2.13.0)
+  - KakaoSDKCommon (2.13.0):
+    - KakaoSDKCommon/Common (= 2.13.0)
+    - KakaoSDKCommon/Network (= 2.13.0)
+  - KakaoSDKCommon/Common (2.13.0)
+  - KakaoSDKCommon/Network (2.13.0):
+    - Alamofire (~> 5.1)
+    - KakaoSDKCommon/Common (= 2.13.0)
+  - KakaoSDKUser (2.13.0):
+    - KakaoSDKAuth (= 2.13.0)
+  - Moya/Combine (15.0.0):
+    - Moya/Core
+  - Moya/Core (15.0.0):
+    - Alamofire (~> 5.0)
+  - SnapKit (5.6.0)
+
+DEPENDENCIES:
+  - CombineCocoa
+  - JWTDecode (~> 3.0)
+  - KakaoSDKAuth
+  - KakaoSDKCommon
+  - KakaoSDKUser
+  - Moya/Combine (~> 15.0)
+  - SnapKit (~> 5.6.0)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - CombineCocoa
+    - JWTDecode
+    - KakaoSDKAuth
+    - KakaoSDKCommon
+    - KakaoSDKUser
+    - Moya
+    - SnapKit
+
+SPEC CHECKSUMS:
+  Alamofire: d368e1ff8a298e6dde360e35a3e68e6c610e7204
+  CombineCocoa: 68a050228ce7c53c1c5ac2c57cccf92a7f5c5085
+  JWTDecode: 82480a7173f8a811954e7e14a2b59f688ca4222a
+  KakaoSDKAuth: 59b694eb81dda10a971beba64bb5842dcb985c81
+  KakaoSDKCommon: 74c422d32200032e4e57f70e065e221296bced71
+  KakaoSDKUser: 7c2d98fc54f744da4784b554a383ada548fed0e5
+  Moya: 138f0573e53411fb3dc17016add0b748dfbd78ee
+  SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
+
+PODFILE CHECKSUM: 09bdbff3c336b0c10196984bb56cd2ea39802374
+
+COCOAPODS: 1.11.2
