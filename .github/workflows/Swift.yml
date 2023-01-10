@@ -22,6 +22,6 @@ jobs:
     - name: Run Tests
       run: |
         pod install --repo-update
-        xcodebuild clean test -project Running-Hi/swift/Running_Hi.xcworkspace \
+        xcodebuild clean test -project Running_Hi.xcworkspace \
         -scheme Running_Hi \
         -destination 'platform=iOS Simulator,name=iPhone 14 Pro,OS=latest'
