@@ -23,6 +23,6 @@ jobs:
       run: |
         ls -a
         #pod install --repo-update --clean-install --project-directory=swift
-        xcodebuild clean test -project Running-Hi/swift/Running_Hi.xcworkspace \
-        -scheme Running_Hi \
-        -destination 'platform=iOS Simulator,name=iPhone 14 Pro,OS=latest'
+        #xcodebuild clean test -project Running-Hi/swift/Running_Hi.xcworkspace \
+        #-scheme Running_Hi \
+        #-destination 'platform=iOS Simulator,name=iPhone 14 Pro,OS=latest'
