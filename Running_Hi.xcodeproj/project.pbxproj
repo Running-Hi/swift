@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		5318E085294B30670053EDDE /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5318E084294B30670053EDDE /* AuthenticationViewController.swift */; };
+		533DB644296DAEBC002287F2 /* DummyKakaoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533DB640296DAEBC002287F2 /* DummyKakaoRepository.swift */; };
+		533DB645296DAEBC002287F2 /* DummyLoginRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533DB641296DAEBC002287F2 /* DummyLoginRepository.swift */; };
+		533DB646296DAEBC002287F2 /* DummyError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533DB642296DAEBC002287F2 /* DummyError.swift */; };
+		533DB647296DAEBC002287F2 /* DummyToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533DB643296DAEBC002287F2 /* DummyToken.swift */; };
 		534C2190295083D5000A3A0E /* SignUpNameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534C218F295083D5000A3A0E /* SignUpNameViewModel.swift */; };
 		534C2192295087CA000A3A0E /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534C2191295087CA000A3A0E /* Coordinator.swift */; };
 		534C21942950884F000A3A0E /* AutheticationViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534C21932950884F000A3A0E /* AutheticationViewCoordinator.swift */; };
@@ -30,13 +34,9 @@
 		53F6173D29658BA800C605E7 /* KakaoRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F6173C29658BA800C605E7 /* KakaoRepositoryProtocol.swift */; };
 		53F6173F2965964300C605E7 /* KakaoAuthProvideUseCaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F6173E2965964300C605E7 /* KakaoAuthProvideUseCaseProtocol.swift */; };
 		53F617A92968067300C605E7 /* KakaoAuthProvideUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F617A82968067300C605E7 /* KakaoAuthProvideUseCaseTest.swift */; };
-		53F617B22968072E00C605E7 /* DummyKakaoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F617B12968072E00C605E7 /* DummyKakaoRepository.swift */; };
-		53F617B42968166F00C605E7 /* DummyError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F617B32968166F00C605E7 /* DummyError.swift */; };
-		53F617B62968342600C605E7 /* DummyToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F617B52968342600C605E7 /* DummyToken.swift */; };
 		53F617B72968396900C605E7 /* Pods_Running_Hi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97A47DF3E7456218702A92A3 /* Pods_Running_Hi.framework */; };
 		53F617B82968396900C605E7 /* Pods_Running_Hi.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 97A47DF3E7456218702A92A3 /* Pods_Running_Hi.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		53F617DB296C2CB800C605E7 /* GetJwtUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F617DA296C2CB800C605E7 /* GetJwtUseCaseTest.swift */; };
-		53F617E2296C2D4900C605E7 /* DummyLoginRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F617E1296C2D4900C605E7 /* DummyLoginRepository.swift */; };
 		53F6A34E294EE299000B5E33 /* ServerNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F6A34D294EE299000B5E33 /* ServerNetworkService.swift */; };
 		53F6A352294EF63A000B5E33 /* SignUpNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F6A351294EF63A000B5E33 /* SignUpNameViewController.swift */; };
 		53F6A356294EFF90000B5E33 /* RunninghiTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F6A355294EFF90000B5E33 /* RunninghiTextField.swift */; };
@@ -81,6 +81,10 @@
 		2CC8834339157F168724CD63 /* Pods-Running_Hi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Running_Hi.release.xcconfig"; path = "Target Support Files/Pods-Running_Hi/Pods-Running_Hi.release.xcconfig"; sourceTree = "<group>"; };
 		3CF8EC2FB90CE9F5F0737E06 /* Pods-Running_Hi-Running_HiTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Running_Hi-Running_HiTests.debug.xcconfig"; path = "Target Support Files/Pods-Running_Hi-Running_HiTests/Pods-Running_Hi-Running_HiTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5318E084294B30670053EDDE /* AuthenticationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewController.swift; sourceTree = "<group>"; };
+		533DB640296DAEBC002287F2 /* DummyKakaoRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DummyKakaoRepository.swift; sourceTree = "<group>"; };
+		533DB641296DAEBC002287F2 /* DummyLoginRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DummyLoginRepository.swift; sourceTree = "<group>"; };
+		533DB642296DAEBC002287F2 /* DummyError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DummyError.swift; sourceTree = "<group>"; };
+		533DB643296DAEBC002287F2 /* DummyToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DummyToken.swift; sourceTree = "<group>"; };
 		534C218F295083D5000A3A0E /* SignUpNameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpNameViewModel.swift; sourceTree = "<group>"; };
 		534C2191295087CA000A3A0E /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		534C21932950884F000A3A0E /* AutheticationViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutheticationViewCoordinator.swift; sourceTree = "<group>"; };
@@ -105,14 +109,10 @@
 		53F617682965A1BC00C605E7 /* Running_Hi copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Running_Hi copy-Info.plist"; path = "/Users/anjongpyo/Desktop/RunningHi/swift/Running_Hi copy-Info.plist"; sourceTree = "<absolute>"; };
 		53F617A62968067300C605E7 /* KakaoAuthProvideUseCaseTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KakaoAuthProvideUseCaseTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		53F617A82968067300C605E7 /* KakaoAuthProvideUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoAuthProvideUseCaseTest.swift; sourceTree = "<group>"; };
-		53F617B12968072E00C605E7 /* DummyKakaoRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DummyKakaoRepository.swift; path = ../../../../../Documents/DummyKakaoRepository.swift; sourceTree = "<group>"; };
-		53F617B32968166F00C605E7 /* DummyError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DummyError.swift; path = ../../../../../Documents/DummyError.swift; sourceTree = "<group>"; };
-		53F617B52968342600C605E7 /* DummyToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DummyToken.swift; path = ../../../../../Documents/DummyToken.swift; sourceTree = "<group>"; };
 		53F617BA29683A7800C605E7 /* FBSDKCoreKit_Basics.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FBSDKCoreKit_Basics.xcframework; path = Pods/FBSDKCoreKit_Basics/XCFrameworks/FBSDKCoreKit_Basics.xcframework; sourceTree = "<group>"; };
 		53F617BB29683A7800C605E7 /* FBSDKCoreKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FBSDKCoreKit.xcframework; path = Pods/FBSDKCoreKit/XCFrameworks/FBSDKCoreKit.xcframework; sourceTree = "<group>"; };
 		53F617D8296C2CB800C605E7 /* GetJwtUseCaseTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GetJwtUseCaseTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		53F617DA296C2CB800C605E7 /* GetJwtUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetJwtUseCaseTest.swift; sourceTree = "<group>"; };
-		53F617E1296C2D4900C605E7 /* DummyLoginRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DummyLoginRepository.swift; path = ../../../../DummyLoginRepository.swift; sourceTree = "<group>"; };
 		53F6A34D294EE299000B5E33 /* ServerNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerNetworkService.swift; sourceTree = "<group>"; };
 		53F6A351294EF63A000B5E33 /* SignUpNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpNameViewController.swift; sourceTree = "<group>"; };
 		53F6A355294EFF90000B5E33 /* RunninghiTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunninghiTextField.swift; sourceTree = "<group>"; };
@@ -305,10 +305,10 @@
 		53F617AF2968068E00C605E7 /* Dummies */ = {
 			isa = PBXGroup;
 			children = (
-				53F617B32968166F00C605E7 /* DummyError.swift */,
-				53F617B52968342600C605E7 /* DummyToken.swift */,
-				53F617B12968072E00C605E7 /* DummyKakaoRepository.swift */,
-				53F617E1296C2D4900C605E7 /* DummyLoginRepository.swift */,
+				533DB642296DAEBC002287F2 /* DummyError.swift */,
+				533DB640296DAEBC002287F2 /* DummyKakaoRepository.swift */,
+				533DB641296DAEBC002287F2 /* DummyLoginRepository.swift */,
+				533DB643296DAEBC002287F2 /* DummyToken.swift */,
 			);
 			path = Dummies;
 			sourceTree = "<group>";
@@ -603,16 +603,14 @@
 				53E61C912956FC31003A5E78 /* JwtData.swift in Sources */,
 				534C219629508F24000A3A0E /* AppCoordinator.swift in Sources */,
 				534C2192295087CA000A3A0E /* Coordinator.swift in Sources */,
-				53F617B42968166F00C605E7 /* DummyError.swift in Sources */,
 				53F6173229644B8400C605E7 /* LoginRepositoryProtocol.swift in Sources */,
-				53F617B62968342600C605E7 /* DummyToken.swift in Sources */,
 				53F61737296580ED00C605E7 /* KakaoAuthProvideUseCase.swift in Sources */,
 				C14FAC7C2941F4510057C3DB /* AppDelegate.swift in Sources */,
 				53F6A356294EFF90000B5E33 /* RunninghiTextField.swift in Sources */,
-				53F617E2296C2D4900C605E7 /* DummyLoginRepository.swift in Sources */,
 				53F6173029644AF900C605E7 /* LoginRepository.swift in Sources */,
 				534C21942950884F000A3A0E /* AutheticationViewCoordinator.swift in Sources */,
 				53F6172A2964484700C605E7 /* GetJwtUseCase.swift in Sources */,
+				533DB645296DAEBC002287F2 /* DummyLoginRepository.swift in Sources */,
 				53F617352964505700C605E7 /* ServerNetworkServcieProtocol.swift in Sources */,
 				534C2190295083D5000A3A0E /* SignUpNameViewModel.swift in Sources */,
 				53E8F98D294DDF4F00E7CCAD /* KakaoNetworkService.swift in Sources */,
@@ -620,9 +618,10 @@
 				53F6173B29658B5400C605E7 /* KakaoRepository.swift in Sources */,
 				5318E085294B30670053EDDE /* AuthenticationViewController.swift in Sources */,
 				53F6A352294EF63A000B5E33 /* SignUpNameViewController.swift in Sources */,
+				533DB646296DAEBC002287F2 /* DummyError.swift in Sources */,
 				53F6A34E294EE299000B5E33 /* ServerNetworkService.swift in Sources */,
 				53F6172629616B7B00C605E7 /* JwtDataServerDTO.swift in Sources */,
-				53F617B22968072E00C605E7 /* DummyKakaoRepository.swift in Sources */,
+				533DB644296DAEBC002287F2 /* DummyKakaoRepository.swift in Sources */,
 				C14FAC7E2941F4510057C3DB /* SceneDelegate.swift in Sources */,
 				53E61C8B2955B232003A5E78 /* ServerServiceAPI.swift in Sources */,
 				534C219D295324CE000A3A0E /* User.swift in Sources */,
@@ -630,6 +629,7 @@
 				53F6172C2964487A00C605E7 /* GetJwtUseCaseProtocol.swift in Sources */,
 				53E61C8D2955B5A5003A5E78 /* OAuth.swift in Sources */,
 				53F6173D29658BA800C605E7 /* KakaoRepositoryProtocol.swift in Sources */,
+				533DB647296DAEBC002287F2 /* DummyToken.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
