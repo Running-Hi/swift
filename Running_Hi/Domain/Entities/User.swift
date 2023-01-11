@@ -6,5 +6,9 @@
 //
 
 struct User: Codable{
-    var email: String
+    let id: String
+    let gender: String
+    let age: Int
+    let nickName: String
+    let region: String
 }

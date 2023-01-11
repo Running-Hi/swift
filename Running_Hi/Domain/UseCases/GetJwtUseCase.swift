@@ -11,32 +11,27 @@ import Combine
 import Foundation
 
 final class GetJwtUseCase: GetJwtUseCaseProtocol{
-    var gotAccessTokenPublisher: AnyPublisher<String?, Never>{
-        self.$gotAccessToken.eraseToAnyPublisher()
-    }
-    var gotRefreshTokenPublisher: AnyPublisher<String?, Never>{
-        self.$gotRefreshToken.eraseToAnyPublisher()
-    }
+    var gotAccessTokenPublisher: AnyPublisher<String?, Never>{ self.$gotAccessToken.eraseToAnyPublisher() }
+    var gotRefreshTokenPublisher: AnyPublisher<String?, Never>{ self.$gotRefreshToken.eraseToAnyPublisher() }
+    var errorPublisher: AnyPublisher<Error?, Never>{ self.$error.eraseToAnyPublisher() }
+    
     
     private let loginRepository: LoginRepositoryProtocol
     
     private var subscription = Set<AnyCancellable>()
     @Published private var gotAccessToken: String?
     @Published private var gotRefreshToken: String?
-    
+    @Published private var error: Error?
     init(loginRepository: LoginRepositoryProtocol) {
         self.loginRepository = loginRepository
     }
 
     func getJwt(for accessToken: String){
         self.loginRepository.fetchJwt(for: accessToken)
-            .sink { [weak self] completion in
-                switch completion{
-                case .finished:
-                    print("getJwtUseCase - Success")
-                case .failure(let err):
-                    print("getJwtUseCase - \(err)")
-                }
+            .sink { [weak self] completion in        
+                guard case .failure(let err) = completion else {return}
+                self?.error = err
+                
             } receiveValue: {[weak self] jwtData in
                 self?.gotAccessToken = jwtData.accessToken
                 self?.gotRefreshToken = jwtData.refreshToken

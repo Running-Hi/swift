@@ -12,6 +12,7 @@
 		533DB645296DAEBC002287F2 /* DummyLoginRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533DB641296DAEBC002287F2 /* DummyLoginRepository.swift */; };
 		533DB646296DAEBC002287F2 /* DummyError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533DB642296DAEBC002287F2 /* DummyError.swift */; };
 		533DB647296DAEBC002287F2 /* DummyToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533DB643296DAEBC002287F2 /* DummyToken.swift */; };
+		533DB64C296EA008002287F2 /* SignUpNameCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533DB64B296EA008002287F2 /* SignUpNameCoordinator.swift */; };
 		534C2190295083D5000A3A0E /* SignUpNameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534C218F295083D5000A3A0E /* SignUpNameViewModel.swift */; };
 		534C2192295087CA000A3A0E /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534C2191295087CA000A3A0E /* Coordinator.swift */; };
 		534C21942950884F000A3A0E /* AutheticationViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534C21932950884F000A3A0E /* AutheticationViewCoordinator.swift */; };
@@ -85,6 +86,7 @@
 		533DB641296DAEBC002287F2 /* DummyLoginRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DummyLoginRepository.swift; sourceTree = "<group>"; };
 		533DB642296DAEBC002287F2 /* DummyError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DummyError.swift; sourceTree = "<group>"; };
 		533DB643296DAEBC002287F2 /* DummyToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DummyToken.swift; sourceTree = "<group>"; };
+		533DB64B296EA008002287F2 /* SignUpNameCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpNameCoordinator.swift; sourceTree = "<group>"; };
 		534C218F295083D5000A3A0E /* SignUpNameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpNameViewModel.swift; sourceTree = "<group>"; };
 		534C2191295087CA000A3A0E /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		534C21932950884F000A3A0E /* AutheticationViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutheticationViewCoordinator.swift; sourceTree = "<group>"; };
@@ -336,6 +338,7 @@
 			children = (
 				53F6A351294EF63A000B5E33 /* SignUpNameViewController.swift */,
 				534C218F295083D5000A3A0E /* SignUpNameViewModel.swift */,
+				533DB64B296EA008002287F2 /* SignUpNameCoordinator.swift */,
 			);
 			path = SignUpScene;
 			sourceTree = "<group>";
@@ -616,6 +619,7 @@
 				53E8F98D294DDF4F00E7CCAD /* KakaoNetworkService.swift in Sources */,
 				53F6173F2965964300C605E7 /* KakaoAuthProvideUseCaseProtocol.swift in Sources */,
 				53F6173B29658B5400C605E7 /* KakaoRepository.swift in Sources */,
+				533DB64C296EA008002287F2 /* SignUpNameCoordinator.swift in Sources */,
 				5318E085294B30670053EDDE /* AuthenticationViewController.swift in Sources */,
 				53F6A352294EF63A000B5E33 /* SignUpNameViewController.swift in Sources */,
 				533DB646296DAEBC002287F2 /* DummyError.swift in Sources */,

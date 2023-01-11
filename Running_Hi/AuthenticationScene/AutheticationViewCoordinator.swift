@@ -7,7 +7,6 @@
 
 import UIKit
 import Foundation
-
 import Combine
 
 class AutheticationViewCoordinator: Coordinator{
@@ -20,7 +19,6 @@ class AutheticationViewCoordinator: Coordinator{
         let serverNetworkService = ServerNetworkService.shared
         let kakaoNetworkService = KakaoNetworkService.shared
         
-        
         let loginRepository = LoginRepository(serverNetworkService: serverNetworkService)
         let kakaoRepository = KakaoRepository(kakaoNetworkService: kakaoNetworkService)
         
@@ -29,7 +27,20 @@ class AutheticationViewCoordinator: Coordinator{
         
         let viewModel = AuthenticationViewModel(getJwtUseCase: getJwtUseCase, kakaoAuthProvideUsecase: kakaoAuthProvideUseCase)
         
+        viewModel.signUpNamePageRequested
+            .sink { _ in
+                self.SignUpNamepageRequest()
+            }
+            .store(in: &subScription)
+        
         let viewContoller = AuthenticationViewController(viewModel: viewModel)
         self.navigationController.pushViewController(viewContoller, animated: false)
+    }
+    
+    private func SignUpNamepageRequest(){
+        let identifier = UUID()
+        let signUpNameCoordinator = SignUpNameCoordinator(identifier: identifier, navigationController: navigationController)
+        self.childCoordinaotors[identifier] = signUpNameCoordinator
+        signUpNameCoordinator.start()
     }
 }

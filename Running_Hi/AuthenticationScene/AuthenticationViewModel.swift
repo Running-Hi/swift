@@ -43,9 +43,7 @@ final class AuthenticationViewModel: AuthenticationViewModelProtocol{
     
     private var subscription = Set<AnyCancellable>()
     
-    func kakaoLoginButtonDidTap(){
-        self.kakaoAuthProvideUsecase.getKakaoAccessToken()
-        
+    private func bind(){
         self.kakaoAuthProvideUsecase.gotKakaoAccessTokenPublisher
             .sink {[weak self] completion in
                 switch completion{
@@ -58,6 +56,21 @@ final class AuthenticationViewModel: AuthenticationViewModelProtocol{
                 self?.passToken(accessToken)
             }
             .store(in: &subscription)
+        //jwt토큰 받은것 처리(UserDefaults에저장)
+        
+        
+        self.getJwtUseCase
+            .errorPublisher
+            .sink { error in
+                guard let _ = error else {return}
+                //에러발생 시 회원가입으로 가자.
+                self.signUpNamePageRequested.send()
+            }
+            .store(in: &subscription)
+    }
+    
+    func kakaoLoginButtonDidTap(){
+        self.kakaoAuthProvideUsecase.getKakaoAccessToken()
     }
     func passToken(_ accessToken: String?){
         guard let accessToken = accessToken else {return}

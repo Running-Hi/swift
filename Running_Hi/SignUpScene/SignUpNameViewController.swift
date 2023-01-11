@@ -14,6 +14,8 @@ import SnapKit
 class SignUpNameViewController: UIViewController {
     private var subScription = Set<AnyCancellable>()
     private var viewModel: SignUpNameViewModel!
+    
+    
     private lazy var titleLabel: UILabel = {
         var label = UILabel()
         label.text = "이름을 알려주세요 :)"
@@ -103,6 +105,7 @@ class SignUpNameViewController: UIViewController {
         
         self.continueButton.tapPublisher
             .sink { _ in
+                //누르면 nameTextField의 str을 signUpGenderCoordinator로 전달
                 self.viewModel.continueButtonDidTap()
             }
             .store(in: &subScription)

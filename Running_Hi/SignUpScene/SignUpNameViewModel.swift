@@ -19,8 +19,10 @@ typealias SignUpNameViewModelProtocol = SignUpNameViewModelInput & SignUpNameVie
 class SignUpNameViewModel: SignUpNameViewModelProtocol{
     private var subScription = Set<AnyCancellable>()
     
+    private var signUpGenderPageRequested = PassthroughSubject<Void, Never>()
+    
     func continueButtonDidTap() {
-        
+        self.signUpGenderPageRequested.send()
     }
     
     

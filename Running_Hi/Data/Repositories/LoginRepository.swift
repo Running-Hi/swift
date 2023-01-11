@@ -17,7 +17,7 @@ final class LoginRepository: LoginRepositoryProtocol{
     func fetchJwt(for accessToken: String) -> AnyPublisher<JwtData, Error> {
         let publisher: AnyPublisher<JwtDataServerDTO, Error> = serverNetworkService.request(accessToken)
         return publisher
-            .map{$0.toDomain()}
+            .tryMap{$0.toDomain()}
             .eraseToAnyPublisher()
     }
 
