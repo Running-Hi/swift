@@ -8,5 +8,6 @@ import Combine
 import Foundation
 
 protocol ServerNetworkServcieProtocol{
-    func request(_ accessToken: String) -> AnyPublisher<JwtDataServerDTO, Error>
+    func request(_ accessToken: String) -> AnyPublisher<ServerResonseDTO<ResponseToken>, Error>
+    func request<T: Decodable>(_ user: User, _ accessToken: String, _ jwtAccessToken: String) -> AnyPublisher<T, Error> 
 }

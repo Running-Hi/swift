@@ -32,6 +32,7 @@ typealias AuthenticationViewModelProtocol = AuthenticationViewModelInput & Authe
 final class AuthenticationViewModel: AuthenticationViewModelProtocol{
     
     var signUpNamePageRequested = PassthroughSubject<Void, Never>()
+    var feedPageRequested = PassthroughSubject<Void, Never>()
     
     private let getJwtUseCase: GetJwtUseCaseProtocol
     private let kakaoAuthProvideUsecase: KakaoAuthProvideUseCaseProtocol
@@ -57,14 +58,19 @@ final class AuthenticationViewModel: AuthenticationViewModelProtocol{
             }
             .store(in: &subscription)
         //jwt토큰 받은것 처리(UserDefaults에저장)
-        
-        
         self.getJwtUseCase
-            .errorPublisher
-            .sink { error in
-                guard let _ = error else {return}
-                //에러발생 시 회원가입으로 가자.
-                self.signUpNamePageRequested.send()
+            .gotJwtAccessTokenPublisher
+            .sink {[weak self] jwtAccessToken in
+                guard let jwtAccessToken = jwtAccessToken else {return}
+                self?.getJwtUseCase.decodeJwtAccessToken(jwtAccessToken)
+                    .sink {[weak self] isUser in
+                        guard let self = self else{return}
+                        if isUser{
+                            self.feedPageRequested.send()
+                        }else{
+                            self.signUpNamePageRequested.send()
+                        }
+                    }.store(in: &self!.subscription)
             }
             .store(in: &subscription)
     }

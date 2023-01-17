@@ -8,7 +8,6 @@ import Foundation
 struct JwtData{
     let accessToken: String
     let refreshToken: String
-    
     init(
         accessToken: String,
         refreshToken: String

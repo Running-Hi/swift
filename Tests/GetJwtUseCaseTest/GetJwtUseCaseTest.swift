@@ -20,13 +20,13 @@ final class GetJwtUseCaseTest: XCTestCase {
         let loginRepository = DummyLoginRepository(isSuccessMode: true)
         let getJwtUseCase = GetJwtUseCase(loginRepository: loginRepository)
         
-        getJwtUseCase.gotAccessTokenPublisher
+        getJwtUseCase.gotJwtAccessTokenPublisher
             .sink { accessToken in
                 guard let accessToken = accessToken else {return}
                 XCTAssertEqual(accessToken, loginRepository.jwtData.accessToken)
             }
             .store(in: &subscription)
-        getJwtUseCase.gotRefreshTokenPublisher
+        getJwtUseCase.gotJwtRefreshTokenPublisher
             .sink { refreshToken in
                 guard let refreshToken = refreshToken else {return}
                 XCTAssertEqual(refreshToken, loginRepository.jwtData.refreshToken)
@@ -38,13 +38,13 @@ final class GetJwtUseCaseTest: XCTestCase {
         let loginRepository = DummyLoginRepository(isSuccessMode: false)
         let getJwtUseCase = GetJwtUseCase(loginRepository: loginRepository)
         
-        getJwtUseCase.gotAccessTokenPublisher
+        getJwtUseCase.gotJwtAccessTokenPublisher
             .sink { accessToken in
                 guard let accessToken = accessToken else {return}
                 XCTAssertEqual(accessToken, loginRepository.jwtData.accessToken)
             }
             .store(in: &subscription)
-        getJwtUseCase.gotRefreshTokenPublisher
+        getJwtUseCase.gotJwtRefreshTokenPublisher
             .sink { refreshToken in
                 guard let refreshToken = refreshToken else {return}
                 XCTAssertEqual(refreshToken, loginRepository.jwtData.refreshToken)

@@ -6,9 +6,10 @@
 //
 
 import Combine
+import Foundation
 
 protocol SignUpNameViewModelInput{
-    func continueButtonDidTap()
+    func continueButtonDidTap(_ nickName: [UUID: String])
 }
 protocol SignUpNameViewModelOutput{
     
@@ -19,10 +20,10 @@ typealias SignUpNameViewModelProtocol = SignUpNameViewModelInput & SignUpNameVie
 class SignUpNameViewModel: SignUpNameViewModelProtocol{
     private var subScription = Set<AnyCancellable>()
     
-    private var signUpGenderPageRequested = PassthroughSubject<Void, Never>()
+    private var feedPageReqeusted = PassthroughSubject<[UUID: String], Never>()
     
-    func continueButtonDidTap() {
-        self.signUpGenderPageRequested.send()
+    func continueButtonDidTap(_ nickName: [UUID: String]) {
+        self.feedPageReqeusted.send(nickName)
     }
     
     

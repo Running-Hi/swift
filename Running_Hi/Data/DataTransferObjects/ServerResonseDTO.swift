@@ -6,9 +6,9 @@
 //
 
 import Foundation
-struct JwtDataServerDTO: Codable{
+struct ServerResonseDTO<T: Codable>: Codable{
     private let success: Bool
-    private var response: ResponseToken
+    private var response: T
     private var error: ResponseError
     
     private enum codingKeys: String, CodingKey{
@@ -18,17 +18,30 @@ struct JwtDataServerDTO: Codable{
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: codingKeys.self)
         self.success = try container.decode(Bool.self, forKey: .success)
-        self.response = (try? container.decode(ResponseToken.self, forKey: .response)) ?? ResponseToken(accessToken: "", refreshToken: "")
+        self.response = try container.decode(T.self, forKey: .response)
         self.error = (try? container.decode(ResponseError.self, forKey: .error)) ?? ResponseError(message: "", status: 200)
     }
     
-    func toDomain() -> JwtData{
+    func toJwtDataDomain() -> JwtData{
+        let response = self.response as? ResponseToken
         return JwtData(
-            accessToken: self.response.accessToken,
-            refreshToken: self.response.refreshToken
+            accessToken: response!.accessToken,
+            refreshToken: response!.refreshToken
         )
     }
     
+    func toSingUpUserDomain() -> User{
+        let response = self.response as? ResponseSignUpUser
+        return User(
+            id: response!.id,
+            gender: response!.gender,
+            age: response!.age,
+            nickName: response!.nickName,
+            region: response!.region,
+            accessToken: response!.accessToken,
+            refreshToken: response!.refreshToken
+        )
+    }
 }
 
 struct ResponseToken: Codable{
@@ -54,6 +67,21 @@ struct ResponseToken: Codable{
         self.refreshToken = try container.decode(String.self, forKey: .refreshToken)
     }
     
+}
+
+struct ResponseSignUpUser: Codable{
+    var id: String
+    var gender: String
+    var age: Int
+    var nickName: String
+    var region: String
+    var accessToken: String
+    var refreshToken: String
+    private enum codingkeys: String, CodingKey{
+        case id, gender, age, nickName, region
+        case accessToken = "access_token"
+        case refreshToken = "refresh_token"
+    }
 }
 
 struct ResponseError: Codable{

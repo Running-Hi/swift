@@ -97,16 +97,16 @@ class SignUpNameViewController: UIViewController {
     }
     
     func bindUI(){
-        self.nameTextField.textPublisher
-            .sink { str in
-                
-            }
-            .store(in: &subScription)
-        
         self.continueButton.tapPublisher
-            .sink { _ in
+            .sink {[weak self] _ in
                 //누르면 nameTextField의 str을 signUpGenderCoordinator로 전달
-                self.viewModel.continueButtonDidTap()
+                guard let nameText = self?.nameTextField.text else {return}
+                //
+                if nameText.count >= 2{
+                    //시범적으로 넣어놓는 데이터
+                    let uuid = UUID()
+                    self?.viewModel.continueButtonDidTap([uuid: nameText])
+                }
             }
             .store(in: &subScription)
 
