@@ -7,9 +7,9 @@
 import Combine
 import Foundation
 protocol GetJwtUseCaseProtocol{
-    var gotJwtAccessTokenPublisher: AnyPublisher<String?, Never> {get}
-    var gotJwtRefreshTokenPublisher: AnyPublisher<String?, Never> {get}
+    var gotJwtDataPublisher: AnyPublisher<JwtData?, Never>  {get}
     var errorPublisher: AnyPublisher<Error?, Never> {get}
     func getJwt(for accessToken: String)
+    func getSignUpJwt(user: User, accessToken: String, jwtAccessToken: String)
     func decodeJwtAccessToken(_ jwtAccessToken: String) -> AnyPublisher<Bool, Never>
 }

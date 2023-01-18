@@ -9,5 +9,5 @@ import Foundation
 
 protocol LoginRepositoryProtocol{
     func fetchJwt(for accessToken: String) -> AnyPublisher<JwtData, Error>
-    func fetchUser(_ user: User, _ accessToken: String, _ refreshToken: String) -> AnyPublisher<User, Error>
+    func fetchSignUpJwt(_ user: User, _ accessToken: String, _ jwtAccessToken: String) -> AnyPublisher<JwtData, Error>
 }

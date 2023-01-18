@@ -14,5 +14,4 @@ struct User: Codable{
     var nickName: String
     var region: String
     var accessToken: String
-    var refreshToken: String
 }

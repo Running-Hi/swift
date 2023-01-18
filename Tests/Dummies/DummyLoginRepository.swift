@@ -9,7 +9,6 @@ import Foundation
 
 final class DummyLoginRepository: LoginRepositoryProtocol{
     
-    
     var isSuccessMode: Bool = true
     
     let jwtData: JwtData = JwtData(
@@ -22,8 +21,7 @@ final class DummyLoginRepository: LoginRepositoryProtocol{
         age: 100,
         nickName: "userData: NickName",
         region: "userData: Region",
-        accessToken: "userData: AccessToken",
-        refreshToken: "userData: RefreshToken"
+        accessToken: "userData: AccessToken"
     )
     
     init(isSuccessMode: Bool) {
@@ -39,9 +37,9 @@ final class DummyLoginRepository: LoginRepositoryProtocol{
             return Fail(error: DummyError.failed).eraseToAnyPublisher()
         }
     }
-    func fetchUser(_ user: User, _ accessToken: String, _ refreshToken: String) -> AnyPublisher<User, Error> {
+    func fetchSignUpJwt(_ user: User, _ accessToken: String, _ refreshToken: String) -> AnyPublisher<JwtData, Error> {
         if self.isSuccessMode{
-            return Just(self.userData)
+            return Just(self.jwtData)
                 .setFailureType(to: Error.self)
                 .eraseToAnyPublisher()
         }else{

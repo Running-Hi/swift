@@ -38,8 +38,7 @@ struct ServerResonseDTO<T: Codable>: Codable{
             age: response!.age,
             nickName: response!.nickName,
             region: response!.region,
-            accessToken: response!.accessToken,
-            refreshToken: response!.refreshToken
+            accessToken: response!.accessToken
         )
     }
 }

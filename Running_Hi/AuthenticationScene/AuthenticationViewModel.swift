@@ -59,9 +59,10 @@ final class AuthenticationViewModel: AuthenticationViewModelProtocol{
             .store(in: &subscription)
         //jwt토큰 받은것 처리(UserDefaults에저장)
         self.getJwtUseCase
-            .gotJwtAccessTokenPublisher
-            .sink {[weak self] jwtAccessToken in
-                guard let jwtAccessToken = jwtAccessToken else {return}
+            .gotJwtDataPublisher
+            .sink {[weak self] jwtData in
+                guard let jwtData = jwtData else {return}
+                let jwtAccessToken = jwtData.accessToken
                 self?.getJwtUseCase.decodeJwtAccessToken(jwtAccessToken)
                     .sink {[weak self] isUser in
                         guard let self = self else{return}
