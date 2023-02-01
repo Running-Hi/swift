@@ -39,6 +39,7 @@ final class GetJwtUseCaseTest: XCTestCase {
         
         getJwtUseCase.getJwt(for: "무엇이 들어가던 상관없다.")
     }
+    
     func testGetJwtFailure(){
         let loginRepository = DummyLoginRepository(isSuccessMode: false)
         let getJwtUseCase = GetJwtUseCase(loginRepository: loginRepository)
@@ -70,6 +71,7 @@ final class GetJwtUseCaseTest: XCTestCase {
         
         getJwtUseCase.getSignUpJwt(user: user, accessToken: "무엇이 들어가던", jwtAccessToken: "상관없다.")
     }
+    
     func testGetSignUpJwtFailure(){
         let loginRepository = DummyLoginRepository(isSuccessMode: false)
         let getJwtUseCase = GetJwtUseCase(loginRepository: loginRepository)
@@ -85,6 +87,7 @@ final class GetJwtUseCaseTest: XCTestCase {
         
         getJwtUseCase.getSignUpJwt(user: user, accessToken: "무엇이 들어가던", jwtAccessToken: "상관없다.")
     }
+    
     
     
     

@@ -13,7 +13,7 @@ import Combine
 import CombineCocoa
 import JWTDecode
 
-class AuthenticationViewController: UIViewController {
+final class AuthenticationViewController: UIViewController {
     
     private lazy var titleLabel: UILabel = {
         var label = UILabel()

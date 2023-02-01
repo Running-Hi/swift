@@ -19,8 +19,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         self.coordinator = AppCoordinator(navigationController: navigationController)
         self.coordinator?.start()
         window = UIWindow(windowScene: windowScene)
-//        window?.rootViewController = navigationController
-        window?.rootViewController = SignUpNameViewController()
+        window?.rootViewController = navigationController
+//        window?.rootViewController = SignUpNameViewController()
         window?.makeKeyAndVisible()
     }
     

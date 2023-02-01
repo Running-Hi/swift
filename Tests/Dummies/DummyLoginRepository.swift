@@ -37,6 +37,7 @@ final class DummyLoginRepository: LoginRepositoryProtocol{
             return Fail(error: DummyError.failed).eraseToAnyPublisher()
         }
     }
+    
     func fetchSignUpJwt(_ user: User, _ accessToken: String, _ refreshToken: String) -> AnyPublisher<JwtData, Error> {
         if self.isSuccessMode{
             return Just(self.jwtData)
@@ -47,4 +48,7 @@ final class DummyLoginRepository: LoginRepositoryProtocol{
                 .eraseToAnyPublisher()
         }
     }
+    
+    
+    
 }

@@ -1,44 +1,56 @@
 //
-//  SignUpViewController.swift
+//  SignUpGenderViewController.swift
 //  Running_Hi
 //
-//  Created by 안종표 on 2022/12/18.
+//  Created by 안종표 on 2023/01/30.
 //
-
+import Combine
 import UIKit
 
-import Combine
 import CombineCocoa
 import SnapKit
 
-class SignUpNameViewController: UIViewController {
-    private var subScription = Set<AnyCancellable>()
-    private var viewModel: SignUpNameViewModel!
+final class SignUpGenderViewController: UIViewController {
+    private var subscription = Set<AnyCancellable>()
+    private var viewModel: SignUpGenderViewModelProtocol!
     
+    convenience init(viewModel: SignUpGenderViewModelProtocol){
+        self.init(nibName: nil, bundle: nil)
+        self.viewModel = viewModel
+    }
     
     private lazy var titleLabel: UILabel = {
         var label = UILabel()
-        label.text = "이름을 알려주세요 :)"
+        label.text = "성별을 알려주세요 :)"
         label.font = UIFont.systemFont(ofSize: 30)
         label.textColor = .black
         label.textAlignment = .center
         return label
     }()
     
-    private lazy var nameTextField: UITextField = {
+    private lazy var genderTextField: UITextField = {
         var textField = UITextField()
         textField.translatesAutoresizingMaskIntoConstraints = false
         textField.font = UIFont.boldSystemFont(ofSize: 20)
         textField.textContentType = .name
         textField.borderStyle = .roundedRect
-        textField.placeholder = "이름 또는 닉네임을 입력해주세요."
+        textField.placeholder = "성별을 입력해주세요."
         
         return textField
     }()
     
     private lazy var explainLabel: UILabel = {
         var label = UILabel()
-        label.text = "Running-Hi에서 프로필에 표시되는 이름입니다."
+        label.text = "Running-Hi에서 프로필에 표시되는 성별입니다."
+        label.textColor = .opaqueSeparator
+        label.textAlignment = .center
+        label.font = UIFont.systemFont(ofSize: 13)
+        return label
+    }()
+    
+    private lazy var exampleLabel: UILabel = {
+        var label = UILabel()
+        label.text = "ex) 남, 여, 성별없음"
         label.textColor = .opaqueSeparator
         label.textAlignment = .center
         label.font = UIFont.systemFont(ofSize: 13)
@@ -54,13 +66,13 @@ class SignUpNameViewController: UIViewController {
         button.titleLabel?.textColor = .white
         button.titleLabel?.textAlignment = .center
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
+        button.isEnabled = false
         return button
     }()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel = SignUpNameViewModel()
         self.configureUI()
         self.bindUI()
     }
@@ -74,8 +86,8 @@ class SignUpNameViewController: UIViewController {
             $0.trailing.equalToSuperview().offset(-70)
         }
         
-        self.view.addSubview(nameTextField)
-        self.nameTextField.snp.makeConstraints{
+        self.view.addSubview(genderTextField)
+        self.genderTextField.snp.makeConstraints{
             $0.centerY.equalToSuperview().offset(-40)
             $0.leading.equalToSuperview().offset(50)
             $0.trailing.equalToSuperview().offset(-50)
@@ -83,7 +95,14 @@ class SignUpNameViewController: UIViewController {
         
         self.view.addSubview(explainLabel)
         self.explainLabel.snp.makeConstraints{
-            $0.top.equalTo(self.nameTextField.snp.bottom).offset(10)
+            $0.top.equalTo(self.genderTextField.snp.bottom).offset(10)
+            $0.leading.equalToSuperview().offset(50)
+            $0.trailing.equalToSuperview().offset(-50)
+        }
+        
+        self.view.addSubview(exampleLabel)
+        self.exampleLabel.snp.makeConstraints{
+            $0.top.equalTo(self.explainLabel.snp.bottom).offset(10)
             $0.leading.equalToSuperview().offset(50)
             $0.trailing.equalToSuperview().offset(-50)
         }
@@ -97,20 +116,26 @@ class SignUpNameViewController: UIViewController {
     }
     
     func bindUI(){
+        self.viewModel.isGenderCheckValidPublisher
+            .sink {[weak self] check in
+                if check{ self?.continueButton.isEnabled = true}
+                else {self?.continueButton.isEnabled = false}
+            }
+            .store(in: &subscription)
+        
+        self.genderTextField.textPublisher
+            .sink {[weak self] genderText in
+                guard let gender = genderText else {return}
+                self?.viewModel.checkGender(gender)
+            }
+            .store(in: &subscription)
+        
         self.continueButton.tapPublisher
             .sink {[weak self] _ in
-                //누르면 nameTextField의 str을 signUpGenderCoordinator로 전달
-                guard let nameText = self?.nameTextField.text else {return}
-                //
-                if nameText.count >= 2{
-                    //시범적으로 넣어놓는 데이터
-                    let uuid = UUID()
-                    self?.viewModel.continueButtonDidTap([uuid: nameText])
+                if let gender = self?.genderTextField.text{
+                    self?.viewModel.continueButtonDidTapped(gender)
                 }
             }
-            .store(in: &subScription)
-
+            .store(in: &subscription)
     }
-
 }
-

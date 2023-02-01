@@ -9,7 +9,7 @@ import UIKit
 import Foundation
 import Combine
 
-class AutheticationViewCoordinator: Coordinator{
+final class AutheticationViewCoordinator: Coordinator{
     private var subScription = Set<AnyCancellable>()
     
     override init(identifier: UUID, navigationController: UINavigationController) {
@@ -39,7 +39,7 @@ class AutheticationViewCoordinator: Coordinator{
     
     private func SignUpNamepageRequest(){
         let identifier = UUID()
-        let signUpNameCoordinator = SignUpNameCoordinator(identifier: identifier, navigationController: navigationController)
+        let signUpNameCoordinator = SignUpNameViewCoordinator(identifier: identifier, navigationController: navigationController)
         self.childCoordinaotors[identifier] = signUpNameCoordinator
         signUpNameCoordinator.start()
     }

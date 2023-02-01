@@ -15,8 +15,13 @@ class AppCoordinator: Coordinator{
     
     func start(){
         let identifier = UUID()
-        let authenticationViewCoordinator = AutheticationViewCoordinator(identifier: identifier, navigationController: navigationController)
-        self.childCoordinaotors[identifier] = authenticationViewCoordinator
-        authenticationViewCoordinator.start()
+        let viewCoordinator = SignUpNameViewCoordinator(identifier: identifier, navigationController: navigationController)
+        self.childCoordinaotors[identifier] = viewCoordinator
+        viewCoordinator.start()
+        
+        
+//        let authenticationViewCoordinator = AutheticationViewCoordinator(identifier: identifier, navigationController: navigationController)
+//        self.childCoordinaotors[identifier] = authenticationViewCoordinator
+//        authenticationViewCoordinator.start()
     }
 }
