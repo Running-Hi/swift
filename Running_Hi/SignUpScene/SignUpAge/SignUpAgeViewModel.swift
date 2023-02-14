@@ -22,6 +22,7 @@ final class SignUpAgeViewModel: SignUpAgeViewModelProtocol{
     var signUpRegionPageRequested = PassthroughSubject<Int, Never>()
     
     private var subscription = Set<AnyCancellable>()
+    
     @Published var ageCheckValidPublisher: Bool = false
     
     func checkAge(_ ageStr: String) {

@@ -33,10 +33,13 @@ final class SignUpAgeViewCoordinator: Coordinator{
         
         //현재 뷰컨트롤러 시작
         let viewController = SignUpAgeViewController(viewModel: viewModel)
-        self.navigationController.pushViewController(viewController, animated: true)
+        self.navigationController.pushViewController(viewController, animated: false)
     }
     
     func signUpRegionPageRequest(_ uuidNickname: [UUID: String], _ gender: String, _ age: Int ){
-        //Todo
+        let identifier = UUID()
+        let signUpRegionCoordinator = SignUpRegionViewCoordinator(uuidNickname: uuidNickname, gender: gender, age: age, identifier: identifier, navigationController: navigationController)
+        self.childCoordinaotors[identifier] = signUpRegionCoordinator
+        signUpRegionCoordinator.start()
     }
 }

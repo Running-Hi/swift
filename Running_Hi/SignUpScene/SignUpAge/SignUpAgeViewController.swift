@@ -14,7 +14,7 @@ import SnapKit
 final class SignUpAgeViewController: UIViewController {
     private var subscription = Set<AnyCancellable>()
     private var viewModel: SignUpAgeViewModelProtocol!
-    
+
     convenience init(viewModel: SignUpAgeViewModelProtocol) {
         self.init(nibName: nil, bundle: nil)
         self.viewModel = viewModel
@@ -135,6 +135,7 @@ final class SignUpAgeViewController: UIViewController {
             .sink {[weak self] _ in
                 guard let ageStr = self?.ageTextField.text else {return}
                 self?.viewModel.continueButtonDidTapped(ageStr)
+                print("클릭")
             }
             .store(in: &subscription)
         

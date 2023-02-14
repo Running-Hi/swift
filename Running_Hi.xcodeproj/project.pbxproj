@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		530BDEFE29951688008F7CCD /* SignUpRegionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530BDEFD29951688008F7CCD /* SignUpRegionViewController.swift */; };
+		530BDF002995169F008F7CCD /* SignUpRegionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530BDEFF2995169F008F7CCD /* SignUpRegionViewModel.swift */; };
+		530BDF02299516AA008F7CCD /* SignUpRegionViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530BDF01299516AA008F7CCD /* SignUpRegionViewCoordinator.swift */; };
 		5318E085294B30670053EDDE /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5318E084294B30670053EDDE /* AuthenticationViewController.swift */; };
 		533DB644296DAEBC002287F2 /* DummyKakaoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533DB640296DAEBC002287F2 /* DummyKakaoRepository.swift */; };
 		533DB645296DAEBC002287F2 /* DummyLoginRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533DB641296DAEBC002287F2 /* DummyLoginRepository.swift */; };
@@ -22,6 +25,7 @@
 		53590AAC2987E16F007D91FE /* SignUpGenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53590AAB2987E16F007D91FE /* SignUpGenderViewController.swift */; };
 		53590AAE2987E20C007D91FE /* SignUpGenderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53590AAD2987E20C007D91FE /* SignUpGenderViewModel.swift */; };
 		53590AB02987E21B007D91FE /* SignUpGenderCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53590AAF2987E21B007D91FE /* SignUpGenderCoordinator.swift */; };
+		5372F5C129992CBE005F7F41 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5372F5C029992CBE005F7F41 /* UIColor.swift */; };
 		53E41C37298A85C00008FD19 /* SignUpAgeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E41C36298A85C00008FD19 /* SignUpAgeViewController.swift */; };
 		53E41C39298A86120008FD19 /* SignUpAgeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E41C38298A86120008FD19 /* SignUpAgeViewModel.swift */; };
 		53E41C3B298A864E0008FD19 /* SignUpAgeViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E41C3A298A864E0008FD19 /* SignUpAgeViewCoordinator.swift */; };
@@ -88,6 +92,9 @@
 /* Begin PBXFileReference section */
 		2CC8834339157F168724CD63 /* Pods-Running_Hi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Running_Hi.release.xcconfig"; path = "Target Support Files/Pods-Running_Hi/Pods-Running_Hi.release.xcconfig"; sourceTree = "<group>"; };
 		3CF8EC2FB90CE9F5F0737E06 /* Pods-Running_Hi-Running_HiTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Running_Hi-Running_HiTests.debug.xcconfig"; path = "Target Support Files/Pods-Running_Hi-Running_HiTests/Pods-Running_Hi-Running_HiTests.debug.xcconfig"; sourceTree = "<group>"; };
+		530BDEFD29951688008F7CCD /* SignUpRegionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRegionViewController.swift; sourceTree = "<group>"; };
+		530BDEFF2995169F008F7CCD /* SignUpRegionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRegionViewModel.swift; sourceTree = "<group>"; };
+		530BDF01299516AA008F7CCD /* SignUpRegionViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRegionViewCoordinator.swift; sourceTree = "<group>"; };
 		5318E084294B30670053EDDE /* AuthenticationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewController.swift; sourceTree = "<group>"; };
 		533DB640296DAEBC002287F2 /* DummyKakaoRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DummyKakaoRepository.swift; sourceTree = "<group>"; };
 		533DB641296DAEBC002287F2 /* DummyLoginRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DummyLoginRepository.swift; sourceTree = "<group>"; };
@@ -103,6 +110,7 @@
 		53590AAB2987E16F007D91FE /* SignUpGenderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpGenderViewController.swift; sourceTree = "<group>"; };
 		53590AAD2987E20C007D91FE /* SignUpGenderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpGenderViewModel.swift; sourceTree = "<group>"; };
 		53590AAF2987E21B007D91FE /* SignUpGenderCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpGenderCoordinator.swift; sourceTree = "<group>"; };
+		5372F5C029992CBE005F7F41 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		53E41C36298A85C00008FD19 /* SignUpAgeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpAgeViewController.swift; sourceTree = "<group>"; };
 		53E41C38298A86120008FD19 /* SignUpAgeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpAgeViewModel.swift; sourceTree = "<group>"; };
 		53E41C3A298A864E0008FD19 /* SignUpAgeViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpAgeViewCoordinator.swift; sourceTree = "<group>"; };
@@ -253,6 +261,9 @@
 		53590AAA2987DF5E007D91FE /* SignUpRegion */ = {
 			isa = PBXGroup;
 			children = (
+				530BDEFD29951688008F7CCD /* SignUpRegionViewController.swift */,
+				530BDEFF2995169F008F7CCD /* SignUpRegionViewModel.swift */,
+				530BDF01299516AA008F7CCD /* SignUpRegionViewCoordinator.swift */,
 			);
 			path = SignUpRegion;
 			sourceTree = "<group>";
@@ -410,6 +421,7 @@
 				534C219529508F24000A3A0E /* AppCoordinator.swift */,
 				53F6A355294EFF90000B5E33 /* RunninghiTextField.swift */,
 				535151CD29894B4C005A4C0E /* UIButton.swift */,
+				5372F5C029992CBE005F7F41 /* UIColor.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -676,9 +688,12 @@
 				53F6173B29658B5400C605E7 /* KakaoRepository.swift in Sources */,
 				53590AAE2987E20C007D91FE /* SignUpGenderViewModel.swift in Sources */,
 				53E41C37298A85C00008FD19 /* SignUpAgeViewController.swift in Sources */,
+				530BDF002995169F008F7CCD /* SignUpRegionViewModel.swift in Sources */,
 				533DB64C296EA008002287F2 /* SignUpNameViewCoordinator.swift in Sources */,
 				5318E085294B30670053EDDE /* AuthenticationViewController.swift in Sources */,
+				5372F5C129992CBE005F7F41 /* UIColor.swift in Sources */,
 				53F6A352294EF63A000B5E33 /* SignUpNameViewController.swift in Sources */,
+				530BDEFE29951688008F7CCD /* SignUpRegionViewController.swift in Sources */,
 				533DB646296DAEBC002287F2 /* DummyError.swift in Sources */,
 				53F6A34E294EE299000B5E33 /* ServerNetworkService.swift in Sources */,
 				53F6172629616B7B00C605E7 /* ServerResonseDTO.swift in Sources */,
@@ -692,6 +707,7 @@
 				53E61C8D2955B5A5003A5E78 /* OAuth.swift in Sources */,
 				53590AAC2987E16F007D91FE /* SignUpGenderViewController.swift in Sources */,
 				53F6173D29658BA800C605E7 /* KakaoRepositoryProtocol.swift in Sources */,
+				530BDF02299516AA008F7CCD /* SignUpRegionViewCoordinator.swift in Sources */,
 				533DB647296DAEBC002287F2 /* DummyToken.swift in Sources */,
 				535151CE29894B4C005A4C0E /* UIButton.swift in Sources */,
 			);
